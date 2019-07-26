@@ -1,0 +1,29 @@
+html{color:#000;background:#FFF}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+
+ul{
+	width: 960px;
+	height: 300px;
+	margin: 100px auto;
+	border: 1px solid #000000;
+	overflow: hidden;
+}
+ul li{
+	list-style: none;
+	width: 160px;
+	height: 300px;
+	float: left;
+	border: 1px solid #000000;
+	box-sizing: border-box;
+	transition: width 0.5s;
+}
+ul li img{
+	width: 460px;
+	height: 300px;
+}
+ul:hover li{
+	width:100px;
+}
+ul li:hover{
+	width: 460px;
+}

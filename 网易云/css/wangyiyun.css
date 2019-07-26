@@ -1,0 +1,222 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+	margin:0;
+	padding:0;
+}
+.header{
+	width: 960px;
+	height: 80px;
+	/*background-color: aqua;*/
+	margin: 0 auto;
+	padding-top: 30px;
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+	font-size: 12px;
+	
+}
+.header .logo{
+	width: 644px;
+	height: 27px;
+	background: url(../img/glb_v2.png) no-repeat 0 0;
+	float: left;
+}.header .logo a{
+	display: inline-block;
+	width:130px;
+	height: 27px;
+	float: left;
+	
+}
+.header .links{
+	width: 200px;
+	height: 27px;
+	
+	float: right;
+	text-align: right;
+
+}
+.header .links a{
+	text-decoration: none;
+	font-size:12px;
+	color: #ccc;
+	line-height: 27px;
+	
+}
+
+
+.content{
+	width: 960px;
+	height: 600px;
+	/*background-color: red;*/
+	margin: 0 auto;
+}
+.content .top{
+	width: 960px;
+	height: 38px;
+
+	background: url(../img/捕获.PNG) repeat-x ;
+}
+.content .top .left{
+	width: 960px;
+	height: 38px;
+	background: url(../img/dsfds43.PNG) no-repeat left 0;
+}
+.content .top .right{
+	width: 960px;
+	height: 38px;
+	/*background-color: red;*/
+	background: url(../img/rt.PNG) no-repeat right 0;
+}
+.content .top .right h1{
+	color: white;
+	font-size: 12px;
+	line-height: 38px;
+	text-indent: 2em;
+}
+.content .bottom{
+	width: 960px;
+	height: 562px;
+	/*background-color: aqua;*/
+}
+.content .bottom .article{
+	width: 642px;
+	height: 562px;
+	/*background-color: darkgoldenrod;*/
+	float: left;
+	padding-top: 50px;
+	padding-left: 80px;
+	box-sizing: border-box;
+	border: 1px solid #CCCCCC;
+	border-top: none;
+	
+}
+.content .bottom .article .articleTop{
+	width: 560px;
+	height: 60px;
+	/*background-color: hotpink;*/
+		
+}
+.content .bottom .article .articleTop ul{
+	list-style: none;
+	width: 335px;
+	height: 34px;
+	/*background-color: green;*/
+	background: url(../img/glb_v2.png) no-repeat 0 -432px;
+		
+}
+.content .bottom .article .articleTop ul li{
+	float: left;
+	width: 167px;
+	height: 34px;
+	/*background-color: blue;*/
+	line-height: 34px;
+	text-align: center;
+		
+}
+.content .bottom .article .articleBottom{
+	width: 560px;
+	height: 373px;
+	/*background-color: red;*/
+}
+.content .bottom .article .articleBottom input[type=submit]
+{
+	width: 119px;
+	height: 37px;
+	background: url(../img/glb_v2.png) no-repeat -144px -360px;
+	border: none;
+	font-size: 20px;
+	color: white ;
+	margin-left:80px;
+	margin-top: 10px;
+}
+.content .bottom .article .articleBottom .line{
+	width: 413px;
+	height: 28px;
+	/*background-color: darkmagenta;*/
+}
+.content .bottom .article .articleBottom .line span{
+	float: left;
+	height: 28px;
+	width: 60px;
+	font-size: 12px;
+	line-height: 28px;
+	text-align: right;
+}
+.content .bottom .article .articleBottom .line span .star{
+	color: red;
+	width: 0px;
+}
+
+.content .bottom .article .articleBottom .line div{
+	float: right;
+	height: 28px;
+	width: 333px;
+	/*background-color: darkblue;*/
+	
+}
+.content .bottom .article .articleBottom .line  input{
+	width: 214px;
+	height: 24px;
+	
+}
+.content .bottom .article .articleBottom .line img{
+	width: 100px;
+	height: 28px;
+	float: left;
+	margin-left: 10px;
+}
+.content .bottom .article .articleBottom .line .vcodeInput{
+	float: left;
+}
+
+.content .bottom .article .articleBottom .line  .special{
+	width: 324px;
+}
+
+
+.content .bottom .article .articleBottom .line div  select{
+	width: 100px;
+	height: 28px;
+}
+.content .bottom .article .articleBottom p{
+	font-size: 12px;
+	margin-left: 80px;
+	line-height: 28px;
+	
+}
+
+
+
+
+.content .bottom .aside{
+	width: 318px;
+	height: 562px;
+	background-color: rgb(245,245,245);
+	float: right;
+	padding-top: 105px;
+	padding-left: 45px;
+	box-sizing: border-box;
+	border: 1px solid #CCCCCC;
+	border-top: none;
+	border-left: none;
+}
+
+
+.footer{
+	width: 960px;
+	height: 160px;
+	background-color:#00FFFF ;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.footer p,a
+{
+	color: #CCCCCC;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.footer p:nth-child(2)
+{
+	margin-top: 40px;
+}

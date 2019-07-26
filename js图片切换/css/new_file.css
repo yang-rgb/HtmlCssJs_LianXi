@@ -1,0 +1,16 @@
+html{color:#000;background:#FFF}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+
+div img{
+	width: 500px;
+	height: 300px;
+}
+div{
+	width: 500px;
+	/* height: 300px; */
+	margin: 50px auto;
+	padding: 10px 10px 10px 10px;
+	background: goldenrod;
+	border: 1px solid #000000;
+	text-align: center;
+}

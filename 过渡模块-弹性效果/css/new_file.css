@@ -1,0 +1,19 @@
+html{color:#000;background:#FFF}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+
+div{
+	height: 100px;
+	background-color: red;
+	margin-top: 100px;
+	text-align: center;
+	line-height: 100px;
+}
+div span{
+	font-size: 80px;
+	/* transition-property: margin;
+	transition-duration:3s; */
+	transition:margin 3s;
+}
+div:hover span{
+	margin: 0 20px;
+}
