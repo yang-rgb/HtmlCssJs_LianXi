@@ -1,0 +1,318 @@
+html{color:#000;background:#FFF}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+ul,ol{
+	list-style: none;
+}
+a{
+	text-decoration: none ;
+	color: #000;
+}
+img{
+	vertical-align: middle;
+}
+
+
+#nav{
+	width: 100%;
+	height: 56px;
+	background-color: #FFFFFF;
+	border-bottom: #e7e7e7 1px solid;
+	z-index: 999;
+	
+	position: fixed;
+	left: 0;
+	top: 0; 
+} 
+#nav .nav-content{
+	width: 1440px;
+	height: 56px;
+	margin: 0 auto;
+}
+#nav .nav-content .nav-content-l{
+	float: left;
+}
+#nav .nav-content .nav-content-l a img{
+		width: 110px;
+		height: 56px;
+}
+#nav .nav-content .nav-content-c{
+	width: 700px;
+	height: 56px;
+	float: left;
+	
+	margin-left: 120px;
+}
+#nav .nav-content .nav-content-c ul li{
+	display: inline-block;
+	height:56px;
+	line-height: 56px;
+	
+}
+#nav .nav-content .nav-content-c ul li a{
+	display: inline-block;
+	padding: 0 15px;
+}
+#nav .nav-content .nav-content-c ul li a img{
+	width: 23px;
+	height: 23px;
+	margin-left: 5px;
+}
+#nav .nav-content .nav-content-c ul li a:hover{
+	background-color: #E7E7E7;
+}
+#nav .nav-content .nav-content-c ul li input{
+	width: 225px;
+	height: 38px;
+	background-color: #E7E7E7;
+	border-radius: 40px;
+	padding-left: 15px;
+	font-size: 14px;
+	color: #b8b8b8;
+	border-style: none;
+	outline: none;
+}
+#nav .nav-content .nav-content-c ul .search-input{
+	position: relative;
+	margin-left: 10px;
+}
+.search-icon{
+	position: absolute;
+	right: 6px;
+	top: 14px;
+}
+
+/* 右边 */
+#nav .nav-content .nav-content-r{
+	width: 300px;
+	height: 56px;
+	float: right;
+	line-height: 56px;
+}
+#nav .nav-content .nav-content-r .head-btn{
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	margin: 0 10px;
+
+}
+#nav .nav-content .nav-content-r .jsa-btn{
+	margin-left: 10px;
+}
+#nav .nav-content .nav-content-r .write-btn{
+	display: inline-block;
+	width: 100px;
+	height: 40px;
+	border-radius: 20px;
+	background-color: #ea6f5a;
+	line-height: 40px;
+	color:#FFFFFF;
+}
+#nav .nav-content .nav-content-r .write-btn img{
+	margin:0 5px;
+}
+
+
+/* 内容 */
+#main{
+	width: 1000px;
+	height: 2000px;
+	margin:70px auto;
+	/* background-color: red; */
+	
+}
+#main .main-left{
+	width: 688px;
+	height: 800px;
+	/* background: yellow; */
+	float: left;
+}
+#main .main-left .main-left-top{
+	height: 270px;
+}
+#main .main-left .main-left-top img{
+	width: 688px;
+	height: 270px;
+	border-radius: 10px;
+}
+#main .main-left .main-left-center{
+	width: 100%;
+	height: 110px;
+	margin-top: 20px;
+}
+#main .main-left .main-left-center a{
+	display: inline-block;
+	height: 32px;
+	border: 1px solid #dcdcdc;
+	margin: 0 18px 18px 0;
+	padding-right: 15px;
+	border-radius: 5px;
+	font-size:14px;
+	background-color: #E7E7E7;
+	vertical-align: top;
+}
+#main .main-left .main-left-center a:last-child{
+	background-color: transparent;
+	border: none;
+	line-height: 32px;
+	font-size: 16px;
+	color: #787878;
+}
+#main .main-left .main-left-center a img{
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	margin-right: 15px;
+	border-radius: 5px 0 0 5px;
+}
+
+/* 文章列表 */
+#main .main-left .main-left-cell{
+	height: 500px;
+}
+#main .main-left .main-left-cell .cell{
+	border-top:1px solid #6666;
+	height: 105px;
+	padding: 10px 0;
+}
+#main .main-left .main-left-cell .cell dt{
+	width: 20%;
+	height: 100px;
+	float: right;
+}
+#main .main-left .main-left-cell .cell dt img{
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+#main .main-left .main-left-cell .cell dd{
+	width: 80%;
+	float: left;
+}
+#main .main-left .main-left-cell .cell dd p{
+	font-size: 14px;
+	margin: 5px 0;
+	color: #666;
+	padding-right: 10px;
+}
+#main .main-left .main-left-cell .cell dd a{
+	margin-right: 10px;
+	font-size: 12px;
+	color: #B8B8B8;
+	
+}
+#main .main-left .main-left-cell .cell dd a img,span{
+	vertical-align: middle;
+}
+
+
+/* 右边 */
+#main .main-right{
+	width: 300px;
+	height: 800px;
+	float: right;
+	
+}
+#main .main-right .main-right-top{
+	height: 290px;
+}
+#main .main-right .main-right-top a img{
+	width: 300px;
+	height: 50px;
+	margin-bottom: 5px;
+}
+#main .main-right .main-right-center{
+	height: 90px;
+	border:1px solid #DCDCDC;
+	border-radius: 5px;
+	padding: 15px 25px;
+	box-sizing: border-box;
+	
+}
+#main .main-right .main-right-center dl dt{
+	float: left;
+	margin-right: 10px;
+}
+#main .main-right .main-right-center dl dd{
+	float: left;
+	margin-top: 8px;
+
+}
+#main .main-right .main-right-center dl dd p{
+	font-size: 14px;
+	margin-top: 3px;
+}
+#main .main-right .main-right-center dl dd p:last-child{
+	color:#DCDCDC;
+}
+#main .main-right .main-right-center dl dt img{
+	width: 60px;
+	height: 60px;
+}
+#main .main-right .main-right-bottom{
+	height: 300px;
+}
+#main .main-right .main-right-bottom ul li{
+	width: 300px;
+	height: 50px;
+	margin-bottom: 10px;
+	position: relative;
+}
+#main .main-right .main-right-bottom ul li>div{
+	float: left;
+	height: 50px;
+	line-height: 25px;
+}
+#main .main-right .main-right-bottom ul li>div>p{
+	color: #CCCCCC;
+}
+#main .main-right .main-right-bottom ul li a img{
+	width: 48px;
+	height: 48px;
+	margin-bottom: 10px;
+	border-radius: 50%;
+	border: 1px solid #ccc;
+	margin-right: 10px;
+}
+#main .main-right .main-right-bottom ul li .author-icon{
+	float: left;
+}
+#main .main-right .main-right-bottom ul li .focus{
+	position: absolute;
+	right: 0;
+	top: 0;	
+	color: greenyellow;
+}
+#main .main-right .main-right-bottom .main-right-bottom-head{
+	height: 45px;
+	line-height: 45px;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	font-size: 14px;
+	color: #787878;
+	margin-bottom: 10px;
+	
+}
+#main .main-right .main-right-bottom .main-right-bottom-head span:first-child{
+	float: left;
+	font-size: 14px;
+	
+}
+#main .main-right .main-right-bottom .main-right-bottom-head span:last-child{
+	float: right;
+	font-size: 14px;
+	
+}
+#main .main-right .main-right-bottom .main-right-bottom-head span a{
+	color: #787878;
+}
+#main .main-right .main-right-bottom .main-right-bottom-footer{
+	display: inline-block;
+	width: 300px;
+	border:1px solid #ccc;
+	padding: 7px 10px;
+	text-align: center;
+	color: #B8B8B8;
+	border-radius: 5px;
+	margin-top: 10px;
+	
+}
