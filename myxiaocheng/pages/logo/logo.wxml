@@ -1,0 +1,10 @@
+<!--pages/logo/logo.wxml-->
+<view class="viewzong">
+  <text class="viewtop">小程序</text>
+  <input type="number" bindblur="shuqujiaodian" placeholder-class="place" placeholder="请输入手机号"></input>
+  <view class="yanzheng">
+    <input class="yanma" placeholder="请输入验证码" placeholder-class="place"></input>
+    <button class="huoyan"  hover-class="dianjitai" size="mini">获取验证码</button>
+  </view>
+  <button class="login" bind:tap="fonglu" hover-class="dianjitai">登陆</button>
+</view>

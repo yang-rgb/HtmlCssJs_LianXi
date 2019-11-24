@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>进度条</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				border: none;
+			}
+			#box{
+				width: 1000px;
+				height: 40px;
+				/* background: #ccc; */
+				margin: 100px auto;
+				position: relative;
+			}
+			#box1{
+				width: 900px;
+				height: 100%;
+				background: #666;
+				border-radius: 10px;
+			}
+			#vale{
+				position: absolute;
+				right: 50px;
+				top: 10px;
+			}
+			#box2{
+				width: 0;
+				height: 100%;
+				background: red;
+				border-top-left-radius: 10px;
+				border-bottom-left-radius: 10px;
+			}
+			span{
+				width: 30px;
+				height: 60px;
+				background: #FF0000;
+				position: absolute;
+				top: -10px;
+				left: 0;
+				border-radius: 10px;
+				cursor: pointer;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id="box">
+			<div id="box1">
+				<div id="box2"></div>
+				<span></span>
+			</div>
+			<div id="vale">0%</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var box=document.getElementById("box");
+		var box1=document.getElementById("box1");
+		var span=box1.children[1];
+		var box2=document.getElementById("box2");
+		var vale=document.getElementById("vale");
+		
+		
+		
+		span.onmousedown=function(){
+			var e=event||window.event; 
+			var left=e.clientX-span.offsetLeft;
+			 console.log(span.offsetLeft)
+			document.onmousemove=function(event){
+				var e=event||window.event;
+				 
+				var x=e.clientX-left;
+				 
+				 if(x<0){
+					 x=0;
+				 }else if(x>=box1.offsetWidth-span.offsetWidth){
+					 x=box1.offsetWidth-span.offsetWidth;
+				 }
+				 
+				box2.style.width=x+"px";
+				span.style.left=x+"px";
+				vale.innerHTML=parseInt(x/(box1.offsetWidth-span.offsetWidth)*100)+"%";
+				
+				return false;
+				
+			}
+			
+			document.onmouseup=function(){
+				document.onmousemove=null;
+			}
+			
+		}
+		
+		
+		
+
+	</script>
+</html>

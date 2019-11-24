@@ -1,0 +1,7 @@
+.box{
+	width: 400px;
+	/* height: 400px; */
+	padding: 200px 0;
+	border: 1px solid #000;
+	text-align: center;
+}

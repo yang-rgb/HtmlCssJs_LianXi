@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			html,body{
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+		
+				line-height: 0;
+				font-size: 0;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<svg id="svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+		<polyline points="0,220 120,120 120,140" fill="none" stroke="red"></polyline>
+		
+		
+		</svg>
+	</body>
+	<script>
+	var XML_NS="http://www.w3.org/2000/svg";
+	var XMLINK_NS="http://www.w3.org/1999/xlink";
+	var svg=document.getElementById("svg");
+	
+	function createTag(tagName,objAttr){
+		var tag=document.createElementNS(XML_NS,tagName);
+		for(var attr in objAttr){
+			if('xlink:href' === attr){
+				tag.setAttributeNS(XMLINK_NS,attr,objAttr[attr]);
+			}else{
+				tag.setAttribute(attr,objAttr[attr]);
+			}
+		}
+		return tag;
+	}
+	
+	var arrNum=[15,30,40,15];
+	var angle=360;
+	var sumNum=0
+	var outerR=120;
+	var innerR=70;
+	var centerX=200;
+	var centerY=200;
+	var outerXY=[{x:320,y:200}];
+	var innerXY=[{x:270,y:200}];
+	var arrColor=["red","blue","yellow","green","black","gray"]
+	
+	for(var i=0;i<arrNum.length;i++){
+		var agNum=arrNum[i]/100*angle;
+		sumNum+=agNum;
+		if(i==arrNum.length-1){
+			sumNum=360;
+		}
+		
+		var outerX=Math.cos(sumNum*Math.PI/180)*outerR+centerX;
+		var outerY=Math.sin(sumNum*Math.PI/180)*outerR+centerY;
+		outerXY.push({x:outerX,y:outerY})
+		
+		var innerX=Math.cos(sumNum*Math.PI/180)*innerR+centerX;
+		var innerY=Math.sin(sumNum*Math.PI/180)*innerR+centerY;
+		innerXY.push({x:innerX,y:innerY})
+	}
+	for(var i=0;i<outerXY.length;i++){
+		
+		if(i==outerXY.length-1){
+			break;
+		}
+		
+		
+		var oPath=createTag("path",{fill:arrColor[i],d:"M"+outerXY[i].x+" "+outerXY[i].y+"A"+outerR+" "+outerR+" 0 0 1 "+outerXY[i+1].x+" "+outerXY[i+1].y+"L"+innerXY[i+1].x+" "+innerXY[i+1].y+"A"+innerR+" "+innerR+" 0 0 0 "+innerXY[i].x+" "+innerXY[i].y});
+		
+		var oA=createTag("animate",{attributeName:'d',dur:'0.5',from:"M"+outerXY[i].x+" "+outerXY[i].y+"A"+outerR+" "+outerR+" 0 0 1 "+outerXY[i].x+" "+outerXY[i].y+"L"+innerXY[i].x+" "+innerXY[i].y+"A"+innerR+" "+innerR+" 0 0 0 "+innerXY[i].x+" "+innerXY[i].y,to:"M"+outerXY[i].x+" "+outerXY[i].y+"A"+outerR+" "+outerR+" 0 0 1 "+outerXY[i+1].x+" "+outerXY[i+1].y+"L"+innerXY[i+1].x+" "+innerXY[i+1].y+"A"+innerR+" "+innerR+" 0 0 0 "+innerXY[i].x+" "+innerXY[i].y})
+		
+		
+		oPath.appendChild(oA)
+		svg.appendChild(oPath);
+	}
+	
+	</script>
+</html>

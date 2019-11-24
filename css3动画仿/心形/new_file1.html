@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>心形</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.xin{
+				width: 200px;
+				height: 200px;
+				background: #008000;
+				position: relative;
+				margin: 100px auto;
+			}
+			.xin:before,.xin:after{
+				content: "";
+				width: 50px;
+				height: 80px;
+				background: red;
+				position: absolute;
+				border-radius: 30px 30px 0 0;
+
+			}
+			.xin:before{
+				top: 47px;
+				left: 57px;
+				transform: rotate(45deg);
+				transform-origin: bottom right;
+			}
+			.xin:after{
+				top: 41px;
+				left: 72px;
+				transform: rotate(-45deg);
+				
+			}
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="xin"></div>
+	</body>
+</html>

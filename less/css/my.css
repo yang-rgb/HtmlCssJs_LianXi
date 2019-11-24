@@ -1,0 +1,31 @@
+div {
+  width: 100PX;
+  height: 100px;
+  border: 2px solid red;
+}
+.ddd,
+.a1 .a2,
+.a3.a1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+}
+.ddd:hover,
+.a1 .a2:hover,
+.a3.a1:hover {
+  border: 1px solid yellow;
+}
+.a1 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+.a1 .a2 {
+  background: red;
+}
+.a3.a1 {
+  background: greenyellow;
+}

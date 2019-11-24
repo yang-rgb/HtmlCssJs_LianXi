@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>随机点名</title>
+		<style>
+			body{
+				text-align: center;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				
+				var but1=document.getElementById("but1");
+				var but2=document.getElementById("but2");
+				var ming=document.getElementById("ming");
+				
+				var dingshi;
+				var arr=['a','s','d','g','h','j'];
+				but1.onclick=function(){
+					clearInterval(dingshi);
+					
+					dingshi=setInterval(function(){
+						shi=Math.floor(Math.random()*arr.length);
+						console.log(shi);
+						ming.innerText=arr[shi];
+					},100)
+				}
+				but2.onclick=function(){
+					clearInterval(dingshi);
+				}
+				
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<button id="but1" type="button">开始点名</button>
+		<button id="but2" type="button">结束点名</button>
+		<div id="ming">名字</div>
+	</body>
+</html>

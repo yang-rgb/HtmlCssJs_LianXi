@@ -1,0 +1,4 @@
+<!--comom/xiangshang/xiangshang.wxml-->
+<view>
+  <image bindtap="huifaongclick" class="imagseer" src="/images/xianshang.png" mode="widthFix"></image>
+</view> 

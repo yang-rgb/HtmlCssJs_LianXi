@@ -1,0 +1,46 @@
+/* pages/fenlei/fenlei.wxss */
+.zong{
+  display: flex;
+  
+}
+.zong .zongfen{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width:100%;
+  min-height: 100vh;
+  background: #ff6666;
+}
+.heightf{
+  width:20%;
+}
+.zong .zongfen .aongzi{
+  width: 100%;
+  padding: 16rpx 0;
+  text-align: center;
+}
+.zong .zongfen text{
+  width: 100%;
+}
+
+
+.zong .zongfen2{
+  width:80%;
+}
+.xianshi{
+  display: flex;
+}
+.xianshi image{
+  width: 180rpx;
+}
+.xianshi .texts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dong{
+  background-color: #f5a4a4;
+}
+scroll-view{
+  height: 100vh;
+}

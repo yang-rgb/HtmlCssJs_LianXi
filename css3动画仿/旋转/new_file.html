@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>旋转</title>
+			<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.wai{
+				margin: 5rem auto;
+				/* position: relative; */
+				width: 2.5rem;
+				height: 2.5rem;
+				/* background: red; */
+				border-radius: 2.5rem;
+				border: #00FFFF 0.1rem solid;
+				
+				animation: qiu 2s linear infinite;
+
+			}
+			.qiu{
+				position: absolute;
+				left: 50%;
+				margin-left: -0.5rem;
+				margin-top: -0.5rem;
+				
+				width: 1rem;
+				height: 1rem;
+				background: blueviolet;
+				border-radius: 1rem;
+			}
+			
+			@keyframes qiu{
+				from{
+					transform: rotate(0deg);
+				}
+				to{
+					transform: rotate(360deg);
+
+				}
+			}
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="wai">
+			<div class="qiu">
+				
+			</div>
+		</div>
+	</body>
+</html>

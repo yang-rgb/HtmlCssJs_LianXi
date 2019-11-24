@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>视频布局</title>
+		<link rel="stylesheet" type="text/css" href="css/shipin.css"/>
+	</head>
+	<body>
+		<div id="wrap">
+			<video src="video/4~1.mp4"></video>
+			<div class="control">
+				<div class="btns">
+					<span class="start"></span>
+					<span class="stop"></span>
+				</div>
+				<div class="progross">
+					<div class="wrap">
+						<div class="inner"></div>
+					</div>
+					<div class="deeppink"></div>
+				</div>
+				<div class="others">
+					<div class="time">
+						<span>00000000</span>
+					</div>
+					<div class="sound">
+						<div class="switch">
+							<span></span>
+						</div>
+						<div class="progross">
+							<div class="wrap">
+								<div class="inner"></div>
+							</div>
+							<div class="deeppink"></div>
+						</div>
+					</div>
+					<div class="full-screen">
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		window.onload=function(){
+			var video=document.querySelector("video");
+			var control=document.querySelector("#wrap>.control");
+			var inner=document.querySelector(".inner");
+			
+			console.log(inner)
+			window.onresize=function(){
+				if(document.documentElement.clientWidth>=600){
+				video.width=document.documentElement.clientWidth;
+				video.height=document.documentElement.clientHeight-control.offsetHeight;	
+				}
+			}
+			
+		
+			
+			
+		}
+	</script>
+</html>

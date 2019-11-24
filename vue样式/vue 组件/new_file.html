@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../node_modules/vue/dist/vue.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		<div id="box">
+			<gai></gai>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		Vue.component("gai",{
+			template:`
+				<p>
+					{{name}},addd;
+<button v-on:click="gainame" type="button">gaiming</button>
+				</p>
+			`,
+			data:function(){
+				return{
+					name:"jom"
+				}
+			},
+			methods:{
+				gainame:function(){
+					this.name="aoa";
+				}
+			}
+			
+			
+		})
+		
+		new Vue({
+			el:"#box"
+		})
+		
+	</script>
+</html>

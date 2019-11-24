@@ -1,0 +1,39 @@
+/* pages/cart/cart.wxss */
+
+.zong{
+ margin-bottom:100rpx; 
+}
+.kuangzong{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ border: 2rpx solid #ccc;
+ margin: 20rpx 20rpx;
+ border-radius: 10rpx;
+}
+.kuangzong image{
+  width:200rpx;
+ 
+}
+.kuangzong .kungtext{
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+}
+.kuangzong .kungtext .text1{
+  padding: 10rpx 0;
+  color: #f44336;
+  box-sizing: content-box;
+}
+.butt{
+  width: 100vw !important;
+  position: fixed;
+  bottom:0;
+  left:0;
+  background: #ff6666;
+  color: white;
+}
+.buttons{
+  background: #ec8282f8;
+}
+

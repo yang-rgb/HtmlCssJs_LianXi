@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>用户名验证</title>
+		<style type="text/css">
+			.lu{
+				color: green;
+			}
+			.zuo{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" class="uname" name="" id="as" value="" /><label for="as">用户名</label>
+		
+	</body>
+	<script type="text/javascript">
+		var input=document.querySelector(".uname");
+		var label=document.querySelector("label");
+		
+		var reg=/^\w{6,16}$/g;
+		
+		input.onblur=function(){
+			if(reg.test(this.value)){
+				label.className="lu";
+				label.innerHTML="用户名格式正确";
+			}else{
+				label.className="zuo";
+				label.innerHTML="用户名格式不正确";
+			}
+
+		}
+		label.onmousedown=function(){
+			return false;
+		}
+		
+	</script>
+</html>

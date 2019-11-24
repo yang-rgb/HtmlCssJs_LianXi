@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#bag{
+				width: 300px;
+				height: 500px;
+				margin: 0 auto;
+				background: url(../img/1.jpg) center no-repeat;
+			}
+			#bag.bagtu{
+				
+				background-image: url(../img/10.jpg);
+			}
+			#bag-health{
+				width: 260px;
+				height: 30px;
+				margin: 0 auto;
+				border: 2px solid #008000;
+			}
+			#bag-health div{
+				height: 100%;
+				background: red;
+			}
+			#controls{
+				width: 300px;
+				height: 60px;
+				margin: 0 auto;
+			}
+		</style>
+		<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+		<script src="../node_modules/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="vue-app">
+			<div id="bag" v-bind:class="{bagtu:none}"></div>
+			
+			<div id="bag-health">
+				<div v-bind:style="{width: health + '%'}"></div>
+			</div>
+			
+			<div id="controls">
+				<button v-on:click="punch" v-show="!none" type="button">使劲敲</button>
+				<button v-on:click="restart" type="button">重新开始</button>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+	window.onload=function(){
+		
+		new Vue({
+			el:"#vue-app",
+			data:{
+				health:100,
+				none:false
+			},
+			methods:{
+				punch:function(){
+					this.health-=50;
+					
+					if(this.health<=0){
+						this.none=true;
+					}
+				},
+				restart:function(){
+					this.health=100;
+					this.none=false;
+				}
+			}
+			
+			
+		})
+		
+	}
+		
+	</script>
+</html>

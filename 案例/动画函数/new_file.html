@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>动画函数</title>
+		<style>
+			#dong{
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+		<script >
+				window.addEventListener('load',function(){
+					
+					donghua1("donghua","dong",20,900);
+					
+					
+					
+		
+					function donghua1(anniu,donghuaID,step,target){
+						var donghua=document.getElementById(anniu);
+						var dong=document.getElementById(donghuaID);
+						
+						var intervallD=null,begin=0;
+						
+						donghua.addEventListener('click',function(){
+							clearInterval(intervallD);
+							intervallD=setInterval(function(){
+								begin+=step;
+								if(begin>=target){
+									clearInterval(intervallD);
+									begin=target;
+								}
+								dong.style.marginLeft=begin+'px';
+							},50)
+						})
+					}
+					
+					
+				
+					
+				})
+				
+				
+		
+		</script>
+	</head>
+	<body>
+		<button id="donghua" type="button">开始动画</button>
+		<div id="dong"></div>
+	</body>
+</html>

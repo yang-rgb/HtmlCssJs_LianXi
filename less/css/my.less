@@ -1,0 +1,34 @@
+@import "./my2.less";
+
+div{
+.jua(R,2px);
+}
+
+.ddd{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 100px;
+}
+.ddd:hover{
+	border: 1px solid yellow;
+	}
+
+
+.a1{
+	position: relative;
+	width: 100px;
+	height: 100px;
+	background: red;
+	
+	.a2:extend(.ddd all){
+		
+		background: red;
+	}
+	.a3&:extend(.ddd all){
+		
+		background: greenyellow;
+	}
+	
+}

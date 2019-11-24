@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>缓动动画</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+			}
+		</style>
+		<script src="Mytool/Mytool.js"></script>
+		<script type="text/javascript">
+			window.addEventListener("load",function(){
+				var target=800,timer=null,speed=0,box=mytool.$("box");
+				
+				mytool.$("button").addEventListener("click",function(){
+					
+					clearInterval(timer);
+					
+					timer=setInterval(function(){
+						speed=(target-box.offsetLeft)*0.2;
+						
+						speed=Math.ceil(speed);
+						
+						box.style.left=box.offsetLeft+speed+"px";
+						if(box.offsetLeft===target){
+							clearInterval(timer);
+						}
+						
+					},20)
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<button id="button" type="button">点击</button>
+		
+		<div id="box"></div>
+	</body>
+</html>

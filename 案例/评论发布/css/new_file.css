@@ -1,0 +1,27 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+#box{
+	width: 600px;
+	
+	padding: 30px 10px;
+	margin: 100px auto;
+	border: 1px solid #ccc;
+}
+#box ul{
+	margin: 10px 10px 0 50px;
+}
+#box ul li{
+	width: 80%;
+	font-size: 20px;
+	color: red;
+	line-height: 40px;
+	border-bottom: 1px solid #000000;
+}
+#box ul li a{
+	float: right;
+	color: red;
+}

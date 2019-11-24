@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		form{
+			width: 600px;
+			margin: 100px auto;
+			text-align: center;
+		}
+		input{
+			display: inline-block;
+			margin-bottom: 20px;
+			width: 60%;
+			padding: 10px;
+			color: #ccc;
+			border-radius: 10px;
+			outline: 0;
+			border: 1px #666 solid;
+		}
+		input:nth-child(3){
+			background: red;
+			color: white;
+			font-size: 20px;
+		}
+	</style>
+	<body>
+		<form action="/zhuce" method="post">
+			<input type="text" name="zhuceming" placeholder="请输入用户名">
+			<input type="text" name="zhucemima" placeholder="密码">
+			<input type="submit" value="注册"/>
+		</form>
+	</body>
+</html>

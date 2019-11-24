@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			fieldset{
+				width: 600px;
+				margin: 50px auto;
+				border-color: orange;
+			}
+			fieldset input{
+				width: 400px;
+				height: 30px;
+				border-radius: 5px;
+				outline: none;
+				border-style: none;
+				border: 1px solid #666;
+			}
+			fieldset div{
+				margin-bottom: 10px;
+			}
+			table{
+				width: 700px;
+				margin: 50px auto;
+				text-align: center;
+				border: 2px solid #FFA500;
+			}
+			table tr th{
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<fieldset id="">
+				<legend>录入系统</legend>
+				<div>
+					<span>姓名</span>
+					<input type="text" placeholder="请录入姓名" v-model="yonghushuju.name"/>
+				</div>
+				<div>
+					<span>年龄</span>
+					<input type="text" placeholder="请录入年龄" v-model="yonghushuju.age"/>
+				</div>
+				<div>
+					<span>性别</span>
+					<select v-model="yonghushuju.sex" >
+						<option value ="男">男</option>
+						<option value ="女">女</option>
+					</select>
+				</div>
+				<div>
+					<span>手机</span>
+					<input type="text" placeholder="请录入手机号" v-model="yonghushuju.phone"/>
+				</div>
+				<button type="button" @click="chuanjian()">创建用户</button>
+				
+			</fieldset>
+			<div>
+				<table>
+					<tr>
+						<th>姓名</th>
+						<th>年龄</th>
+						<th>性别</th>
+						<th>手机</th>
+						<th>删除</th>
+					</tr>
+					<tr v-for="(p,index) in persons">
+						<td>{{p.name}}</td>
+						<td>{{p.age}}</td>
+						<td>{{p.sex}}</td>
+						<td>{{p.phone}}</td>
+						<td>
+							<button type="button" @click="shanchu(index)">删除</button>
+						</td>
+						
+					</tr>
+				
+				</table>
+			</div>
+			
+			
+		</div>
+	</body>
+	<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		new Vue({
+			el:"#app",
+			data:{
+				persons:[
+					{name:"张三",age:30,sex:'男',phone:'131323231'},
+					{name:"栗子",age:56,sex:'女',phone:'131323231'},
+					{name:"王武",age:20,sex:'男',phone:'131323231'},
+					{name:"无理",age:14,sex:'男',phone:'131323231'}
+				],
+				yonghushuju:{name:'',age:0,sex:'',phone:''}
+			},
+			methods:{
+				chuanjian(){
+					if(this.yonghushuju.name===""){
+						alert('X');
+						return;
+					}
+					if(this.yonghushuju.age<=0){
+						alert('X');
+						return;
+					}
+					if(this.yonghushuju.sex===""){
+						alert('X');
+						return;
+					}
+					if(this.yonghushuju.phone===""){
+						alert('X');
+						return;
+					}
+					
+					
+					this.persons.unshift(this.yonghushuju);
+					this.yonghushuju={name:'',age:0,sex:'',phone:''}
+				},
+				
+				shanchu(index){
+					this.persons.splice(index,1);
+				}
+			}
+		})
+	</script>
+</html>

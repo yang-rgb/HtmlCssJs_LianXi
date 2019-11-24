@@ -1,0 +1,12 @@
+<!--component/z-tabber.wxml-->
+<!-- <text>component/z-tabber.wxml</text> -->
+<view class="tab-control">
+  <block wx:for="{{titles}}" wx:key="{{titles}}">
+    <view 
+    class='tab-item {{current==index?"active":""}}'
+    bindtap="hanshuclick"
+    data-index="{{index}}">
+    <text>{{item}}</text>
+    </view>
+  </block>
+</view>

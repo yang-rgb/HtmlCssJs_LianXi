@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var ff=document.getElementById("ff");
+				
+				ff.onchange=function(){
+					var nei=ff.value;
+					
+					var jie=nei.substr(nei.lastIndexOf('.'));
+					
+					var xiao=jie.toLowerCase();
+					
+					if(xiao===".jpg"){
+						alert("上传格式正确");
+					}else{
+						alert("上传格式不正确");
+					}
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<input type="file" name="" id="ff" value="" />
+	</body>
+</html>

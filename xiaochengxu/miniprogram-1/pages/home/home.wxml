@@ -1,0 +1,15 @@
+<!--pages/home/home.wxml-->
+<!-- <text>pages/home/home.wxml</text> -->
+
+<w-swiper list='{{banners}}'/>
+
+<w-recommend recommend="{{recommend}}" />
+
+<view class="text">
+  <text>本周流行</text>
+  <image src="{{banners[0].url}}"></image>
+</view>
+
+<z-tabber titles="{{['流行','精品','新款']}}"
+          bind:itemclick="handshu2"
+/>

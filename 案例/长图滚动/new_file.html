@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>长图滚动</title>
+		<style >
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			#box{
+				width: 500px;
+				height: 300px;
+				border: 6px solid red;
+				margin: 100px auto;
+				overflow: hidden;
+				position: relative;
+			}
+			#img{
+				position:absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			#to_top{
+				position:absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height:50%;	
+			}
+			#to_bottom{
+				position:absolute;
+				top: 50%;
+				left: 0;
+				width: 100%;
+				height:50%;		
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				
+				var img=document.getElementById("img");
+				var to_top=document.getElementById("to_top");
+				var to_bottom=document.getElementById("to_bottom");
+				var box=document.getElementById("box");
+
+				
+				var jishiid,num=0;
+				
+				to_top.onmouseover=function(){
+					clearInterval(jishiid);
+					
+					jishiid=setInterval(function(){
+						num-=10;
+						if(-num<935){
+							img.style.top=num+"px";
+						}else{
+							clearInterval(jishiid);
+						}
+						
+					},60)
+				}
+					
+				to_bottom.onmouseover=function(){
+					clearInterval(jishiid);
+					
+					jishiid=setInterval(function(){
+						num+=10;
+						
+						if(num<=0){
+							img.style.top=num+"px";
+						}else{
+							clearInterval(jishiid);
+						}
+						
+					},60)
+				}
+				
+				box.onmouseout=function(){
+					clearInterval(jishiid);
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<img id="img" src="img/1.png" >
+			<span id="to_top"></span>
+			<span id="to_bottom"></span>
+
+		</div>
+	</body>
+</html>

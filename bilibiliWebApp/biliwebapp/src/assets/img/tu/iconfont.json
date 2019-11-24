@@ -1,0 +1,44 @@
+{
+  "id": "1496610",
+  "name": "bili",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6847076",
+      "name": "收 藏 ",
+      "font_class": "shoucang",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "8629617",
+      "name": "点赞",
+      "font_class": "dianzan",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "9353508",
+      "name": "币币",
+      "font_class": "bibi",
+      "unicode": "e6aa",
+      "unicode_decimal": 59050
+    },
+    {
+      "icon_id": "9683268",
+      "name": "分享",
+      "font_class": "fenxiang",
+      "unicode": "e6a2",
+      "unicode_decimal": 59042
+    },
+    {
+      "icon_id": "11338113",
+      "name": "点赞后",
+      "font_class": "zan-copy-copy",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+<!--pages/fenlei/fenlei.wxml-->
+<view class="zong">
+
+<scroll-view class="heightf"  scroll-y>
+  <view class="zongfen" >
+    <view 
+      class="aongzi {{chock==item.id?'dong':''}}" 
+      id="{{item.id}}" 
+      bindtap="dianclick"  
+      wx:for="{{fenleidata}}" 
+      wx:key="{{index}}"
+      >
+        <text>{{item.name}}</text>
+    </view>
+  </view>
+
+</scroll-view>
+
+<scroll-view scroll-y>
+  <view class="zongfen2">
+    <view 
+      class="xianshi" 
+      wx:for="{{prList==''?productList:prList}}" 
+      wx:key="{{index}}"
+      >
+      <image src="{{item.src}}" mode="widthFix"></image>
+      <view class="texts">
+          <text>{{item.name}}</text>
+          <text>{{item.price}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+</view>

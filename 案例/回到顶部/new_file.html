@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>侧边广告位</title>
+		<style>
+			#box12{
+				width: 600px;
+				height: 2000px;
+				background: #008000;
+				margin: 0 auto;
+			}
+			#guang{
+				position: absolute;
+				top: 150px;
+				left: 0;
+			}
+			p{
+				font-size: 40px;
+			}
+			#hui{
+				width: 100px;
+				height: 100px;
+				background: #ADFF2F;
+				text-align: center;
+				line-height: 100px;
+				position: fixed;
+				right: 10px;
+				bottom:100px;
+				display: none;
+				cursor: pointer;
+				
+			}
+		</style>
+		<script src="../Mytool/Mytool.js"></script>
+		<script>
+			window.addEventListener("load",function(){
+				var screenTopH=0,begin=0,end=0,timerID=null;
+				
+				var hui=document.getElementById("hui");
+				window.addEventListener("scroll",function(){
+					screenTopH=document.body.scrollTop || document.documentElement.scrollTop;
+					
+					screenTopH>0 ? hui.style.display="block":hui.style.display="none";
+					begin=screenTopH;
+					// console.log(begin);
+
+				})
+				
+				hui.addEventListener("click",function(){
+					
+					clearInterval(timerID);
+					
+					timerID=setInterval(function(){
+						
+						begin+=(end-begin)*0.2;
+						
+						
+						window.scrollTo(0,begin);
+						
+						if(Math.round(begin)===end){
+							clearInterval(timerID);
+						}
+						
+					},20)
+					
+					
+					
+					})
+				
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box12">
+			<p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<p>ccccccccccccccccccccccccccc</p>
+			<p>ccccccccccccccccccccccccccc</p>
+			<p>ccccccccccccccccccccccccccc</p>
+			<p>ccccccccccccccccccccccccccc</p>
+			<p>ccccccccccccccccccccccccccc</p>
+			<p>ccccccccccccccccccccccccccc</p>
+			<p>ccccccccccccccccccccccccccc</p>
+			<p>ccccccccccccccccccccccccccc</p>
+			<p>ccccccccccccccccccccccccccc</p>
+			<p>ccccccccccccccccccccccccccc</p>
+		</div>
+		<div id="guang">
+			<img src="13.jpg" width="300px" >
+		</div>
+		<span id="hui">
+			回到顶部
+		</span>
+	</body>
+</html>

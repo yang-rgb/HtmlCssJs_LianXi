@@ -1,0 +1,151 @@
+/* 通用样式0 */
+body{
+	color: #000000;
+	/* font-family: arial; */
+}
+a:hover{
+	text-decoration: none;
+}
+ul,ol{
+	list-style: none;
+}
+/* @font-@font-face {
+	font-family:a;
+	src: url();
+} */
+
+
+/* 通用样式1 */
+
+
+/* 头部0 */
+/* #lk_header{} */
+
+#lk_header .top-bar{
+	height: 40px;
+	line-height: 39px;
+	border-bottom: 1px solid #686868;
+	
+}
+#lk_header .top-bar .container .row>div+div{
+		border-left: 1px solid #e0e0e0;
+}
+#lk_header .top-bar .container .row .top-bar-1 a{
+	position: relative;
+	
+}
+#lk_header .top-bar .container .row .top-bar-1 a img{
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 999;
+	display: none;
+}
+#lk_header .top-bar .container .row .top-bar-1 a:hover img{
+	display: block;
+}
+
+/* 导航 */
+
+#lk_header .navbar-lk{
+	border-bottom: 1px solid #e0e0e0;
+}
+	
+#lk_header .navbar-brand img{
+	width: 130px;
+	margin-left: 15px;
+	margin-right: 60px;
+}
+#lk_header .navbar-lk .navbar-nav>li>a{
+	margin-left: 10px;
+	height: 40px;
+}
+#lk_header .navbar-lk .navbar-nav>li>a:hover{
+	border-bottom: 2px solid palevioletred;
+}
+
+#lk_header .navbar-lk .navbar-toggler{
+	margin-top: 5px;
+}
+	
+
+/* 头部1
+
+
+/* 轮播图0 */
+#lk_carousel{
+	/* background: gold; */
+}
+#lk_carousel .carousel-item{
+	background: no-repeat center center;
+	 background-size:cocer; 
+}
+
+
+#lk_carousel .carousel-item img{
+	width: 100%;
+}
+@media screen and (min-width:900px){
+	#lk_carousel .carousel-item{
+		height: 410px;
+	}
+}
+
+
+/* 轮播图1 */
+
+
+/* 热门课程0 */
+#lk_hot{
+	
+}
+#lk_hot img{
+	height: 30px;
+}
+
+/* 热门课程1 */
+
+
+/* 产品中心0 */
+#lk_product{
+	background-color: #f0f0f0;
+	padding: 40px 0;
+}
+#lk_product .nav-item{
+	font-size: 18px;
+}
+#lk_product .nav-item a{
+	color: #000000;
+	border: none;
+	padding: 20px 10px;
+}
+#lk_product .nav-item a.active{
+	border: none;
+	background: transparent;
+	border-bottom: 2px solid palevioletred;
+	color: palevioletred;
+}
+/* 产品中心1 */
+
+
+/* 关于我们0 */
+#lk_about{
+	/* background: yellow; */
+}
+/* 关于我们1 */
+
+
+
+/* 友情链接0 */
+#lk_link{
+	
+}
+/* 友情链接1 */
+
+
+/* 尾部0 */
+#lk_footer{
+	background: blueviolet;
+}
+/* 尾部1 */

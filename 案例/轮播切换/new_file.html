@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>轮播切换</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				text-decoration: none;
+				color: #000000;
+			}
+			img{
+				width: 500px;
+				height: 300px;
+				float: left;
+			}
+			#imgt{
+				width: 500px;
+				height: 300px;
+				float: left;
+				background: aqua;
+				overflow:hidden;
+
+			}
+			#box{
+				width: 700px;
+				height: 300px;
+				margin: 100px auto;
+				border: 1px solid #000000;
+			}
+			#box ul:first-of-type{
+				width: 100px;
+				height: 100%;
+				float: left;
+				text-align: center;
+			}
+			
+			#box ul:last-of-type{
+				width: 100px;
+				height: 100%;
+				float: right;
+				text-align: center;
+			}
+			
+			#box ul li{
+				width: 100%;
+				height: 100px;
+				line-height: 100px;
+				background: #ccc;
+				border-bottom: 1px solid #000000;
+				font-size: 20px;
+				font-weight: bold;
+				box-sizing: border-box;
+			}
+			#box ul .yanse{
+				background-color: red;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				
+				var lis=document.getElementsByTagName("li");
+				var as=document.getElementsByTagName("img");
+
+				var loop=0;
+				
+				setInterval(function(){
+					loop+=1;
+					
+					loop%=6;
+					
+					for(var i=0;i<lis.length;i++){
+						lis[i].className="";
+						as[i].style.display="none";
+					}
+					lis[loop].className="yanse";
+					as[loop].style.display="block";
+					
+				},1000)
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li class="yanse"><a  href="">海1</a></li>
+				<li ><a href="">海2</a></li>
+				<li><a href="">海3</a></li>
+			</ul>
+			<div id="imgt">
+				<a href=""><img src="img/1.jpg" alt=""></a>
+				<a href=""><img src="img/2.jpg" alt=""></a>
+				<a href=""><img src="img/3.jpg" alt=""></a>
+				<a href=""><img src="img/4.jpg" alt=""></a>
+				<a href=""><img src="img/5.jpg" alt=""></a>
+				<a href=""><img src="img/6.jpg" alt=""></a>
+			</div>
+			<ul>
+				<li><a href=""></a>海4</li>
+				<li><a href=""></a>海5</li>
+				<li><a href=""></a>海6</li>
+			</ul>
+		</div>
+	</body>
+</html>

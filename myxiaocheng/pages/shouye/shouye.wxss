@@ -1,0 +1,167 @@
+/* pages/shouye/shouye.wxss */
+.lunbo{
+  padding: 20rpx 20rpx;
+  border-radius: 80rpx;
+  overflow: hidden;
+}
+.lunbo swiper swiper-item image{
+  height:100%;
+  width: 100%;
+}
+
+.navheight{
+  height: 360rpx;
+}
+.nav{
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav .navzi text{
+  font-size: 20rpx;
+  color: #888;
+  margin-top: 10rpx;
+}
+.nav .navzi{
+  flex: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.nav .navzi image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.Prod{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40rpx;
+  margin-top: 70rpx;
+}
+.Prod .Prodzi{
+  flex: 46%;
+  border: 2rpx solid #ccc;
+  margin: 10rpx 10rpx;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.Prod .Prodzi image{
+  width:100%;
+}
+.Prod .Prodzi .jiage{
+  margin-left: 20rpx;
+  color: red;
+}
+
+.scroll-view{
+  min-width: 100vw;
+
+}
+
+.hangn{
+  height: 130rpx;
+}
+.hengnav{
+ display: flex;
+ height: 130rpx;
+ justify-content: space-around;
+ margin: 20rpx 0;
+ min-width: 120vw;
+ background-color: white;
+}
+.hengnav .navbiao{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hengnav .navbiao .navbiaotext{
+  font-size: 40rpx;
+}
+.hengnav .navbiao .navbiaotext2{
+  font-size: 30rpx;
+  color: #888;
+}
+
+::-webkit-scrollbar{
+ width: 100vh;
+ height: 20rpx;
+ background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+  background-color:rgba(189,189,189,0.6);
+  border-radius: 5rpx;
+}
+
+.hengnav .navbiao .navclass{
+  font-weight: 600;
+  font-size: 50rpx;
+}
+.hengnav .navbiao .navclass2{
+  color:#ff6666;
+  position: relative;
+}
+.hengnav .navbiao .navclass2::after{
+  content: "";
+  position: absolute;
+  top:-48rpx;
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+  border: 15rpx solid #ff6666;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-radius: 50%;
+}
+
+.navye{
+  position: relative;
+}
+.fenye{
+  position: absolute;
+  bottom: -10rpx;
+  left: 50%;
+  transform: translateX(-50%)
+}
+.fenye text{
+  display: inline-block;
+  margin: 0 10rpx;
+  border-radius: 50%;
+  width:20rpx;
+  height: 20rpx;
+  background-color: rgba(158,158,158 ,1);
+  transition: all 0.3s;
+}
+.fenye .text1{
+  width:45rpx;
+  height: 20rpx;
+  border-radius: 20rpx;
+  background-color: #ff6666;
+}
+
+.suosuo{
+  margin: 10rpx 20rpx 0rpx;
+  background-color: #F5F5F5;
+  border-radius: 20rpx;
+  padding: 10rpx 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.suosuo .suosuotu{
+  width: 40rpx;
+  margin-left: 10rpx;
+}
+
+.fiexd{
+  position: fixed;
+  top:-20rpx;
+  left:0;
+  background-color: white;
+}

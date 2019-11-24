@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>侧边广告位</title>
+		<style>
+			#box12{
+				width: 600px;
+				height: 2000px;
+				background: #008000;
+				margin: 0 auto;
+			}
+			#guang{
+				position: absolute;
+				top: 150px;
+				left: 0;
+			}
+			p{
+				font-size: 40px;
+			}
+		</style>
+		<script src="../Mytool/Mytool.js"></script>
+		<script>
+			window.addEventListener("load",function(){
+				var offsetTop=mytool.$("guang").offsetTop;
+				
+				var begin=0, end=0, timerID=null;
+				
+				window.addEventListener("scroll",function(){
+					
+					clearInterval(timerID);
+					
+				var scrollTopHeight=document.body.scrollTop || document.documentElement.scrollTop;
+				end=offsetTop+scrollTopHeight;
+				
+				timerID=setInterval(function(){
+					
+					begin+=(end-begin)*0.2;					
+					mytool.$("guang").style.top=begin+'px';
+					
+					if(Math.round(begin)===end){
+						clearInterval(timerID);
+					}
+					
+				},20)
+				
+				})
+				
+				
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box12">
+			<p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<p>ccccccccccccccccccccccccccc</p>
+			<p>ccccccccccccccccccccccccccc</p>
+			<p>ccccccccccccccccccccccccccc</p>
+			<p>ccccccccccccccccccccccccccc</p>
+			<p>ccccccccccccccccccccccccccc</p>
+			<p>ccccccccccccccccccccccccccc</p>
+			<p>ccccccccccccccccccccccccccc</p>
+			<p>ccccccccccccccccccccccccccc</p>
+			<p>ccccccccccccccccccccccccccc</p>
+			<p>ccccccccccccccccccccccccccc</p>
+		</div>
+		<div id="guang">
+			<img src="13.jpg" width="300px" >
+		</div>
+	</body>
+</html>

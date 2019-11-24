@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>个人相册</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			html,body,ul{
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+			img{
+				width: 500px;
+				height: 300px;
+			}
+			
+			li{
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: all 1s;
+				
+			}
+			.curren{
+				z-index: 99 !important;
+				top: 50% !important;
+				left: 50% !important;
+				transform: rotate(0deg) translate(-50%,-50%) !important;
+				box-shadow: 0 0 10px black ,2px 2px 20px black;
+			}
+			
+		</style>
+		<script type="text/javascript">
+		window.onload=function(){
+			
+			
+			
+			var ul=document.getElementById("ul");
+			for(var i=0;i<7;i++){
+				var li=document.createElement("li");
+				ul.appendChild(li);
+					
+				var img=document.createElement("img");
+				img.src="img/"+(i+1)+".jpg";
+				li.appendChild(img);
+			
+			}
+			var lis=ul.children;
+			var pinX=document.documentElement.clientWidth-500;
+			var pinY=document.documentElement.clientHeight-300;
+
+			for(var j=0;j<lis.length;j++){
+				var li=lis[j];
+				var x=parseInt(Math.random()*pinX);
+				var y=parseInt(Math.random()*pinY);
+				var du=Math.random()*360;
+				var  zeng=parseInt(Math.random()*10);
+				
+				li.style.left=x+"px";
+				li.style.top=y+"px";
+				
+				li.style.transform="rotate("+du+"deg)";
+				li.style.zIndex=zeng;
+				
+				li.onclick=function(){
+					
+					for(var i=0;i<lis.length;i++){
+						lis[i].className="";
+					}
+					this.className="curren";
+				}
+				
+				
+			}
+			
+			
+			
+			
+		}
+			
+		</script>
+	</head>
+	<body>
+		<ul id="ul">
+			
+		</ul>
+		
+	</body>
+</html>

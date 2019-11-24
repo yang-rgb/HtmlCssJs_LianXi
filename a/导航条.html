@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ajax-get</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			html,
+			body {
+			  width: 100%;
+			  overflow: hidden;
+			}
+			#wrap{
+				width: 100%;
+				height: 56px;
+				position: relative;
+				
+			}
+			
+			#ul{
+				position: absolute;
+				/* float: left; */
+				/* width: 100%; */
+				white-space: nowrap;
+				height: 56px;
+				background: #0077AA;
+			}
+			#ul li{
+				width: 56px;
+				display: inline-block;
+				font-size: 20px;
+			}
+			
+			
+		</style>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<ul id="ul">
+				<li>首页</li>
+				<li>首4页</li>
+				<li>首45页</li>
+				<li>ed首页</li>
+				<li>首e页</li>
+				<li>首45页</li>
+				<li>ed首页</li>
+				<li>首e页</li>
+				<li>首wfsaz页</li>
+				<li>首tr页</li>
+				<li>首4页</li>
+				<li>首45页</li>
+				<li>ed首页</li>
+				<li>首e页</li>
+				<li>首45页</li>
+				<li>ed首页</li>
+				<li>首e页</li>
+				<li>首wfsaz页</li>
+				<li>首tr页</li>
+				
+			
+			
+			</ul>
+			
+		</div>
+	</body>
+	<script src="Mytool/Mytool.js"></script>
+	<script>
+		window.onload=function(){
+			var div=document.getElementById("wrap");
+			var ul=document.getElementById("ul");
+			var startX=0;
+			var endX=0;
+			var cha=0;
+			var speen=0;
+			var x=0;
+			var timer=0;
+			var fistimer=0;
+			ul.addEventListener("touchstart",function(ev){
+				ev=ev||event;
+				var yidong=ev.targetTouches[0];
+				startX=yidong.clientX;
+				x=ul.offsetLeft;
+				timer=new Date().getTime();
+				
+			})
+			
+			ul.addEventListener("touchmove",function(ev){
+				ev=ev||event;
+				var yidongs=ev.changedTouches[0];
+				
+				endX=yidongs.clientX;
+				cha=endX-startX;
+				
+// 					if(x>=0){
+// 						x=0;
+// 					}else if(x<=-(ul.offsetWidth-document.documentElement.clientWidth)){
+// 						x=-(ul.offsetWidth-document.documentElement.clientWidth);
+// 					}
+					console.log(x)
+					ul.style.left=x+cha+"px";
+					// ul.style.transform='translate('+cha+'px,0px)';
+					// ul.style.transition="all 0s";
+			})
+				
+			// ul.addEventListener("touchend",function(){
+			// 	
+			// 
+			// }
+			var kai=0,end=0;
+			function sun(end){
+				
+				setInterval(function(){
+					kai +=(end-kai)*0.2;
+					ul.style.left=kai+"px";
+					
+				},20);
+			}
+}
+			
+	</script>
+</html>

@@ -1,0 +1,40 @@
+/* comom/searchbar/searchbar.wxss */
+.sousuo{
+  width: 100vw;
+  height: 160rpx;
+  background-color: #ff6666;
+  overflow: hidden;
+  position: relative;  
+}
+.inp{
+  width: 400rpx;
+  height: 60rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  margin-left: 100rpx;
+  margin-top: 60rpx;
+  padding: 0 20rpx;
+  text-align: center;
+}
+.imagse{
+  width: 50rpx;
+  position: absolute;
+  left: 0;
+  margin-top: 65rpx;
+  margin-left: 30rpx;
+}
+.textzong{
+ display: flex;
+ justify-content: center;
+flex-direction: column;
+}
+.textsuo{
+  display: inline-block;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 10rpx 20rpx;
+  border-radius: 10rpx;
+  border: 2rpx solid #eee;
+
+}

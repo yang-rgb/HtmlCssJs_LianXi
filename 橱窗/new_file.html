@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>橱窗</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			img{
+				width: 200px;
+				height: 100px;
+			}
+			#box{
+				width: 1000px;
+				height: 200px;
+				border: 1px solid black;
+				margin: 100px auto;
+				position: relative;
+				overflow: hidden;
+			}
+			#ul{
+				width:0;
+				height: 100px;
+				position: absolute;
+				top: 10px;
+				left: 0;
+			}
+			li{
+				float:left;
+			}
+			li+li{
+				margin-left: 10px;
+			}
+			#box2{
+					width: 100%;
+					height: 40px;
+					background: #666;
+					position: absolute;
+					left: 0;
+					bottom: 0px;
+			}
+			span{
+				width: 30px;
+				height: 100%;
+				background: red;
+				position: absolute;
+				left: 0;
+				border-radius: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul id="ul">
+				<li><img src="img/1.jpg" alt=""></li>
+				<li><img src="img/2.jpg" alt=""></li>
+				<li><img src="img/3.jpg" alt=""></li>
+				<li><img src="img/4.jpg" alt=""></li>
+				<li><img src="img/5.jpg" alt=""></li>
+				<li><img src="img/6.jpg" alt=""></li>
+				<li><img src="img/7.jpg" alt=""></li>
+				<li><img src="img/8.jpg" alt=""></li>
+				<li><img src="img/9.jpg" alt=""></li>
+				<li><img src="img/10.jpg" alt=""></li>
+				<li><img src="img/11.jpg" alt=""></li>
+				<li><img src="img/12.jpg" alt=""></li>
+				<li><img src="img/13.jpg" alt=""></li>
+				<li><img src="img/14.jpg" alt=""></li>
+				<li><img src="img/15.jpg" alt=""></li>
+				<li><img src="img/16.jpg" alt=""></li>
+				<li><img src="img/17.jpg" alt=""></li>
+			</ul>
+			<div id="box2">
+				<span></span>
+			</div>
+		</div>
+	</body>
+	<script>
+		var box=document.getElementById("box");
+		var ul=document.getElementById("ul");
+		var lis=ul.children;
+		var box2=document.getElementById("box2");
+		var span=box2.children[0];
+		
+		var liWW=0;
+		for(var i=0;i<lis.length;i++){
+			var liW=lis[i];
+			liWW+=(liW.offsetWidth+parseInt(getComputedStyle(lis[i],null).marginLeft));
+		}
+		ul.style.width=liWW+"px";
+		
+		var spanW=(box.offsetWidth/ul.offsetWidth)*box.offsetWidth;
+		// console.log(spanW)
+		span.style.width=spanW+"px";
+		
+		span.onmousedown=function(event){
+			var e=event||window.event;
+			
+			var x=e.clientX-span.offsetLeft;
+			
+			document.onmousemove=function(event){
+				var e=event||window.event;
+				var xleft=e.clientX-x;
+				
+				if(xleft<0){
+					xleft=0;
+				}else if(xleft>=box.offsetWidth-span.offsetWidth){
+					xleft=box.offsetWidth-span.offsetWidth;
+				}
+				
+				var ulju=(liWW-box.offsetWidth)/(box.offsetWidth-span.offsetWidth)*xleft;
+				
+				span.style.left=xleft+"px";
+				ul.style.left=-ulju+"px";
+				
+				return false;
+			}
+			
+			document.onmouseup=function(){
+				document.onmousemove=null;
+			}
+		}
+		
+		
+		
+	</script>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>音乐Tai</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/my.css"/>
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="head">
+				<div class="head-top">
+					<div class="logo">
+						<a href="javascripe:;">
+							<img src="img/logo_new.png" class="imgi">
+						</a>
+					</div>
+					
+					<a href="javascripe:;" class="menButn"></a>
+					
+					<div class="btns">
+						<a href="javascripe:;">登录</a>
+						<a href="javascripe:;">注册</a>
+						<a href="javascripe:;" class="search">搜素</a>
+					</div>
+				</div>
+			
+				<div class="head-bottom">
+					<form action="" method="post">
+						<input type="text" placeholder="66ss九" />
+						<input type="submit" value="搜索" />
+					</form>
+				</div>
+				<ul class="mask" style="display: none;">
+					<li>
+						<a href="javascript:;">首页</a>
+					</li>
+					<li>
+						<a href="javascript:;">首页</a>
+					</li>
+					<li>
+						<a href="javascript:;">首页</a>
+					</li>
+					<li>
+						<a href="javascript:;">首页</a>
+					</li>
+					<li>
+						<a href="javascript:;">首页</a>
+					</li>
+					<li>
+						<a href="javascript:;">首页</a>
+					</li>
+					<li>
+						<a href="javascript:;">首页</a>
+					</li>
+					<li>
+						<a href="javascript:;">首页</a>
+					</li>
+					<li>
+						<a href="javascript:;">首页</a>
+					</li>
+					
+				</ul>
+			</div>
+		
+			<div class="content">
+				<div class="nav">
+					<ul class="list">
+						<li class="active">
+							<a href="javascript:;">首页</a>
+						</li>
+						<li>
+							<a href="javascript:;">首页</a>
+						</li>
+						<li>
+							<a href="javascript:;">首页</a>
+						</li>
+						<li>
+							<a href="javascript:;">首页</a>
+						</li>
+						<li>
+							<a href="javascript:;">首页</a>
+						</li>
+						<li>
+							<a href="javascript:;">首页</a>
+						</li>
+						<li>
+							<a href="javascript:;">首页</a>
+						</li>
+						<li>
+							<a href="javascript:;">首页</a>
+						</li>
+						<li>
+							<a href="javascript:;">首页</a>
+						</li>
+						<li>
+							<a href="javascript:;">首页</a>
+						</li>
+						<li>
+							<a href="javascript:;">首页</a>
+						</li>
+						<li>
+							<a href="javascript:;">首页</a>
+						</li>
+						<li>
+							<a href="javascript:;">首页</a>
+						</li>
+						<li>
+							<a href="javascript:;">首页</a>
+						</li>
+						<li>
+							<a href="javascript:;">首页</a>
+						</li>
+						<li>
+							<a href="javascript:;">首页</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		window.onload=function(){
+			document.addEventListener("touchstart",function(ev){
+				ev=ev||event;
+				ev.preventDefault();
+			});
+			
+			
+			
+			(function(){
+				var styleNode=document.createElement("style");
+				var w=document.documentElement.clientWidth/16;
+				styleNode.innerHTML="font-size:"+w+"px!important";
+				document.head.appendChild(styleNode);
+			})();
+			
+			drag();
+			function drag(){
+				var wrap=document.querySelector("#wrap .content .nav");
+				var item=document.querySelector("#wrap .content .nav .list");
+				console.log(item.children.length)
+					var startX=0;
+					var elementX=0;
+					wrap.addEventListener("touchstart",function(ev){
+					ev=ev||event;
+					var touchC=ev.changedTouches[0];
+					startX=touchC.clientX;
+					elementX=wrap.offsetLeft;
+					
+					})
+					wrap.addEventListener("touchmove",function(ev){
+					ev=ev||event;
+					var touchC=ev.changedTouches[0];
+					var nowX=touchC.clientX;
+					var disX=nowX-startX;
+					var index=wrap.offsetLeft/document.documentElement.clientWidth;
+					index=Math.round(index);
+					
+					if(index>0){
+						index=0;
+					}else if(index<wrap.clientWidth){
+						index=wrap.clientWidth;
+					}
+					
+					
+					wrap.style.left=index*(document.documentElement.clientWidth)+"px";
+					
+					})
+				
+				
+			}
+			
+			
+			
+			
+			
+			changeFocus();
+			function changeFocus(){
+				var inputText=document.querySelector("#wrap .head .head-bottom form input[type='text']");
+				inputText.addEventListener("touchstart",function(ev){
+					ev=ev||event;
+					this.focus();
+					ev.stopPropagation();
+					ev.preventDefault();
+					
+				})
+				document.addEventListener("touchstart",function(){
+					inputText.blur();
+				})
+				
+			}
+			
+			Btn();
+			function Btn(){
+				var btn=document.querySelector(".imgi");
+				var mask=document.querySelector(".mask");
+				var flag=false;
+				btn.addEventListener("touchstart",function(ev){
+					ev=ev||event;
+					
+					flag=!flag;
+					var touchC=ev.changedTouches[0];
+					if(flag){
+						mask.style.display="block";
+					}else{
+						mask.style.display="none";
+					}
+					ev.stopPropagation();
+					ev.preventDefault();
+				})
+				
+				document.addEventListener("touchstart",function(ev){
+					 if(flag){
+						mask.style.display="none";
+					 	flag=!flag;
+					 }
+				})
+				
+				mask.addEventListener("touchstart",function(ev){
+					ev=ev||evet;
+					ev.stopPropagation();
+					ev.preventDefault();
+				})
+				
+			}
+			
+			
+			
+			
+			
+		}
+	</script>
+</html>

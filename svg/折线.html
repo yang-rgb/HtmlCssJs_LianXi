@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			html,body{
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+		
+				line-height: 0;
+				font-size: 0;
+			}
+		</style>
+	</head>
+	<body >
+		
+		<svg id="svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+		<polyline points="0,220 120,120 120,140" fill="none" stroke="red"></polyline>
+		
+		
+		</svg>
+		
+	</body>
+	<script>
+		 var XML_NS="http://www.w3.org/2000/svg";
+		 var XMLINK_NS="http://www.w3.org/1999/xlink";
+		 var svg=document.getElementById("svg");
+		 var oPolyline=null;
+		 var pointsNum='';
+		 function createTag(tagName,objAttr){
+			 var tag=document.createElementNS(XML_NS,tagName);
+			 for(var attr in objAttr){
+				 if('xlink:href' === attr){
+					tag.setAttributeNS(XMLINK_NS,attr,objAttr[attr]);
+				}else{
+					tag.setAttribute(attr,objAttr[attr]);
+				}
+			 }
+			  return tag;
+		 }
+	document.onmousedown=function(e){
+		var e=e||event;
+		if(!oPolyline){
+			oPolyline=createTag('polyline',{'fill':'none','stroke':'red','stroke-width':'2'});
+			svg.appendChild(oPolyline);
+		}
+		var x=e.clientX;
+		var y=e.clientY;
+
+		pointsNum+=x+","+y+" ";
+		oPolyline.setAttribute("points",pointsNum)
+		console.log(oPolyline)
+		
+		var oCircle=createTag('circle',{'cx':x,'cy':y,'r':'5',"fill":'white','stroke':'red','stroke-width':'3'});
+		svg.appendChild(oCircle);
+		
+		svg.onmousemove=yi;
+	};
+	
+	svg.onmousemove=yi;
+	function yi(e){
+		var e=e||event;
+		var x=e.clientX
+		var y=e.clientY
+		if(oPolyline){
+			oPolyline.setAttribute("points",pointsNum+" "+x+","+y);
+		}
+		
+	};
+	
+	svg.oncontextmenu=function(){
+		svg.onmousemove=null;
+		return false;
+	}
+	
+	
+	
+	</script>
+</html>

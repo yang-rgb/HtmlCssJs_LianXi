@@ -1,0 +1,134 @@
+html{color:#000;background:#FFF}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+	
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+.clearfix::before,.clearfix::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+input,botton{
+	outline: none;
+}
+
+html{
+	font-size: 10px;
+}
+a{
+	color: #800080;
+}
+
+
+
+
+#content{
+	width: 50rem;
+	
+	border: 0.1rem solid #e0e0e0;
+	margin: 5rem auto;
+}
+
+#content .content-header a{
+	width: 50%;
+	height: 6rem;
+	display: inline-block;
+	float:left;
+	text-align: center;
+	line-height: 6rem;
+	background-color:#E0E0E0;
+	color: #666666;
+	font-size: 2rem;
+}
+#content .content-header a:first-child:hover{
+	background-color: transparent;
+}
+
+#content .content-header a:last-child:hover{
+	background-color: transparent;
+}
+
+
+/* 内容 */
+#content .content-body{
+
+	padding: 4rem;
+}
+#content .content-body .dom1 .s1{
+	margin-bottom: 2rem;
+}
+#content .content-body .dom1 .s1 h4{
+	color: #666666;
+}
+#content .content-body .dom1 .s1 input{
+	width: 100%;
+	height: 4rem;
+	margin-top: 0.5rem;
+	padding-left: 0.5rem;
+	border-radius: 5px;
+	border: 0.1rem solid #ccc;
+	
+}
+#content .content-body .dom1 .s2{
+	margin-bottom: 2rem;
+	
+}
+#content .content-body .dom1 .s2 span{
+	margin-bottom: 2rem;
+	vertical-align: top;
+}
+
+#content .content-body .dom1 .btn{
+	width: 100%;
+	height: 4rem;
+	border-style: none;
+	font-size: 2rem;
+	color: #FFFFFF;
+	background-color: purple;
+	border-radius: 3px ;
+	margin-bottom: 2rem;
+}
+#content .content-body .dom-footer .login-another{
+	color: #666666;
+	margin-bottom:2rem;
+}
+#content .content-body .dom-footer .login-another span{
+	margin: 0 5px;
+}
+#content .content-body .dom-footer .login-three{
+	color: #666666;
+	text-align: center;
+}
+#content .content-body .dom-footer .login-three span{
+	position: relative;
+}
+#content .content-body .dom-footer .login-three span::before,
+#content .content-body .dom-footer .login-three span::after{
+	content: "";
+	display:inline-block;
+	width: 10rem;
+	height:0.1rem;
+	border-bottom: 1px solid #E0E0E0;
+	
+	position: absolute;
+	top: 50%;
+	
+}
+
+#content .content-body .dom-footer .login-three span::before{
+	left: -91%;
+}
+#content .content-body .dom-footer .login-three span::after{
+	right: -91%;
+}
+#content .content-body .dom-footer .login-three .login-icon{
+	margin-top: 2rem;
+}
+#content .content-body .dom-footer .login-three .login-icon img{
+	width: 5rem;
+}

@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>花瓣网</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				vertical-align: top;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+			}
+			.page{
+				width: 100%;
+				height: auto;
+				padding-top: 48px;	
+			}
+			/* 头部0 */
+			.header{
+				width: 100%;
+				height: 48px;
+				background-color: white;
+				/* box-shadow: 0 5px 5px #ccc; */
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 999;
+			}
+			.header .header-in{
+				width: 1244px;
+				height: 100%;
+				margin: 0 auto;
+				
+			}
+			.header .header-in .header-left{
+				width: 435px;
+				height: 28px;
+				float: left;
+				margin-top: 10px;
+			}
+			.header .header-in .header-left li{
+				float: left;
+				margin-right: 20px;
+			}
+			.header .header-in .header-left li a{
+				line-height: 28px;
+				text-align: center;
+				display: inline-block;
+				text-decoration: none;
+				color: #444;
+				font-size: 14px;
+			}
+			.header .header-in .header-left li a:hover{
+				color: #c90000;
+			}
+			.header .header-in .header-left li:last-child a{
+				font-size: 40px;
+				line-height: 2px;
+			}
+			.header .header-in .header-left .new{
+				width: 30px;
+				height: 14px;
+				background-color: #f4a523;
+				display: inline-block;
+				line-height: 10px;
+				margin-top: 6px;
+				margin-left: 2px;
+				color: white;
+				font-size: 12px;
+			}
+			.header .header-in .header-left .logo-pic a{
+				width: 74px;
+				height: 24px;
+				background: url(img/logo_38.png) no-repeat;
+				background-size: cover;
+			}
+			
+			.header .header-in .header-center{
+				width: 675px;
+				height: 34px;
+				float: left;
+				margin-top: 7px;
+			}
+			.header .header-in .header-center input{
+				width: 100%;
+				height: 100%;
+				padding: 10px;
+				box-sizing: border-box;
+				outline: none;
+				background-color: #fafafa;
+				border: 1px solid #ddd;
+				border-radius: 5px;
+				font-size: 14px;
+				resize:none;
+			}
+			.header .header-in .header-right{
+				width: 116px;
+				height: 48px;
+				float: right;
+			}
+			.header .header-in .header-right a{
+				float: right;
+				width: 52px;
+				height: 32px;
+				line-height: 32px;
+				display: inline;
+				text-align: center;
+				text-decoration: none;
+				color: #383838;
+				border: 1px solid #d9d9d9;
+				margin-top: 7px;
+				font-size: 16px;
+				border-radius: 2px;
+			}
+			.header .header-in .header-right a:first-child{
+				float: left;
+				background: linear-gradient(#e53e49,#d43636);
+				color: white;
+				border: 1px solid #c90000;
+			}
+			.header .header-in .header-right a:first-child:hover{
+				background: #e53e49;
+			}
+			/* 头部1 */
+			
+			
+			 /* 中间广告切换0 */
+			.slider-banner{
+				width: 100%;
+				height: 60px;
+				background: red;
+			}
+			.slider-banner ul{
+				width: 100%;
+				height: 60px;
+				position: relative;
+				
+			}
+			.slider-banner ul li{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 1; 
+			}
+			.slider-banner ul li a{
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+			}
+			.slider-banner ul li:nth-child(1) a{
+				background: url(img/11.jpg) center center no-repeat;
+			}
+			.slider-banner ul li:nth-child(2) a{
+				background: url(img/10.jpg) center center no-repeat;
+			}
+			.slider-banner ul li:nth-child(3) a{
+				background: url(img/15.jpg) center center no-repeat;
+			}
+			.slider-banner ul li:nth-child(4) a{
+				background: url(img/13.jpg) center center no-repeat;
+			}
+			.slider-banner ul li:nth-child(5) a{
+				background: url(img/17.jpg) center center no-repeat;
+			}
+			.slider-banner ul li:nth-child(6) a{
+				background: url(img/18.jpg) center center no-repeat;
+			}
+			.slider-banner ul li:nth-child(7) a{
+				background: url(img/6.jpg) center center no-repeat;
+			}
+			 /* 中间广告切换1 */
+			 
+			 /* 快速登录0 */
+			 .quick-login{
+				 width: 100%;
+				 height: 120px;
+				 background: linear-gradient(#ff7f50,#ff6348);
+			 }
+			 .quick-login .quick-login-in{
+				 width: 1244px;
+				 height: 100%;
+				 margin: 0 auto;
+				 display: flex;
+				 justify-content: space-between;
+				 color: white;
+				 font-size: 18px;
+			 }
+			 .quick-login .quick-login-in .intro{
+				 display: flex;
+				 flex-direction: column;
+				 justify-content: center;
+				 
+			 }
+			 .quick-login .quick-login-in .intro .title{
+				 font-size: 22px;
+				 font-weight: bold;
+				 margin-bottom: 5px;
+			 }
+			 .quick-login .quick-login-in .login_icon {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				
+			 }
+			 .quick-login .quick-login-in .login_icon li{
+				 float: left;
+				 margin-right: 10px;
+				 margin-bottom: 5px;
+			 }
+			 .quick-login .quick-login-in .login_icon li a{
+			 	width: 54px;
+				height: 54px;
+				display: inline-block;
+			 }
+			 .quick-login .quick-login-in .login_icon li:nth-child(1) a{
+				background: url(img/icons_login_big.png) 0 0 no-repeat;
+			 }
+			 .quick-login .quick-login-in .login_icon li:nth-child(2) a{
+			 	background: url(img/icons_login_big.png) -80px 0 no-repeat;
+			 }
+			 .quick-login .quick-login-in .login_icon li:nth-child(3) a{
+			 	background: url(img/icons_login_big.png) -160px 0 no-repeat;
+			 }
+			 .quick-login .quick-login-in .login_icon li:nth-child(4) a{
+			 	background: url(img/icons_login_big.png) -240px 0 no-repeat;
+			 }
+			 .quick-login .quick-login-in .login_icon .tip_text{
+				 position: relative;
+			 }
+			.quick-login .quick-login-in .login_icon .tip_text .line_left{
+				 border-top: 1px solid #FFFFFF;
+				 display: block;
+				 position: absolute;
+				 width: 40px;
+				 top:10px;
+				 left: -45px;
+			  }
+			  .quick-login .quick-login-in .login_icon .tip_text .line_right{
+			  	 border-top: 1px solid #FFFFFF;
+			  	 display: block;
+			  	 position: absolute;
+			  	 width: 40px;
+			  	 top:10px;
+			  	 right: -45px;
+			    }
+			 
+			 /* 快速登录1 */
+			 
+			 
+			/* 吸顶效果0 */
+			.top-nav{
+				width: 100%;
+				height: 70px;
+				position: fixed;
+				left: 0;
+				top: 48px;
+				background-color: rgba(0,0,0,0.5);
+				z-index: 999;
+				display: none;
+			}
+			.top-nav .top-nav-in{
+				width: 1244px;
+				height: 100%;
+				margin: 0 auto;
+			}
+			.top-nav .top-nav-in>div{
+				width: 350px;
+				height: 100%;
+				color: white;
+			}
+			.top-nav .top-nav-in .left{
+				float: left;
+			}
+			.top-nav .top-nav-in .left p:first-child{
+				font-size: 24px;
+				font-weight: bold;
+				margin-top: 12px;
+			}
+			.top-nav .top-nav-in .right{
+				float: right;
+				margin-top: 15px;
+			}
+			.top-nav .top-nav-in .right li{
+				width: 42px;
+				height: 42px;
+				float: left;
+				margin-left: 5px;
+			}
+			.top-nav .top-nav-in .right li a{
+				width: 42px;
+				height: 42px;
+				display: inline-block;
+			}
+			.top-nav .top-nav-in .right li:nth-child(1){
+				width: 140px;
+				font-size: 14px;
+				line-height: 42px;
+			}
+			.top-nav .top-nav-in .right li:nth-child(2){
+				background: url(img/icons_login_fixbg.png) no-repeat;
+			}
+			.top-nav .top-nav-in .right li:nth-child(3){
+				background: url(img/icons_login_fixbg.png) -60px 0 no-repeat;
+			}
+			.top-nav .top-nav-in .right li:nth-child(4){
+				background: url(img/icons_login_fixbg.png) -120px 0 no-repeat;
+			}
+			.top-nav .top-nav-in .right li:nth-child(5){
+				background: url(img/icons_login_fixbg.png) -180px 0 no-repeat;
+			}
+			
+			/* 吸顶效果1 */
+			
+			/* 类型标题0 */
+			.type-title{
+				width: 100%;
+				height: 130px;
+			}
+			.type-title .type-title-in{
+				position: relative;
+				width:230px;
+				height: 100%;
+				margin: 0 auto;
+				text-align: center;
+				line-height: 130px;
+				font-size: 30px;
+				color: #666;
+			}
+			.type-title .type-title-in .line-left,.type-title .type-title-in .line-right{
+				width: 48px;
+				border-top:1px solid #666;
+				position: absolute;
+				top: 65px;
+			}
+			.type-title .type-title-in .line-left{
+				left: 25px;
+			}
+			.type-title .type-title-in .line-right{
+				right: 25px;
+			}
+			/* 类型标题1 */
+			
+			/* 选项卡0 */
+			.tab{
+				width: 100%;
+				height: auto;
+			}
+			.tab .tab-header{
+				width: 300px;
+				height: 48px;
+				margin: 0 auto;
+			}
+			.tab .tab-header ul li{
+				float: left;
+				width: 100px;
+				text-align: center;
+				line-height: 47px;
+				font-size: 18px;
+				cursor: pointer;
+			}
+			.tab .tab-header ul .current{
+				border-bottom: 1px solid tomato;
+				color: tomato;
+			}
+			.tab .tab-content{
+				width: 100%;
+				background-color: #e8e8e8;
+			}
+			.tab .tab-content .dom{
+				display: none;
+				
+			}
+			.tab .tab-content .dom:nth-child(1){
+				width: 100%;
+			}
+			.tab .tab-content .dom:nth-child(2){
+				width: 100%;
+				background: green;
+			}
+			.tab .tab-content .dom:nth-child(3){
+				width: 100%;
+				background: yellow;
+			}
+			.dom_top{
+				width: 1244px;
+				padding: 16px;
+				margin: 0 auto;
+				height: 126px;
+			}
+			.dom_top li{
+				width: 236px;
+				height: 126px;
+				float: left;
+				margin-left: 16px;
+			}
+			.dom_top li a{
+				width: 236px;
+				height: 126px;
+				border-radius: 4px;
+				display: inline-block;
+			}
+			.dom_top li:nth-child(1){
+				margin-left: 0;
+			}
+			.dom_top li:nth-child(1) a{
+				background: url(img/6.jpg) no-repeat;
+				background-size: 100%;
+			}
+			.dom_top li:nth-child(2) a{
+				background: url(img/6.jpg) no-repeat;
+				background-size: 100%;
+			}
+			.dom_top li:nth-child(3) a{
+				background: url(img/6.jpg) no-repeat;
+				background-size: 100%;
+			}
+			.dom_top li:nth-child(4) a{
+				background: url(img/6.jpg) no-repeat;
+				background-size: 100%;
+			}
+			.dom_top li:nth-child(5) a{
+				background: url(img/6.jpg) no-repeat;
+				background-size: 100%;
+			}
+
+			/* 选项卡1 */
+			
+			.dom-pull{
+				width: 1240px;
+				padding: 20px 0;
+				position: relative;
+				/* background: red; */
+				margin: 0 auto;
+				height: 800px;
+			}
+			.dom-pull .box{
+				width: 234px;
+				float: left;
+				border: 1px solid #ccc;
+				box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+				position: relative;
+			}
+			.dom-pull .box .pic{
+				position: relative;
+				cursor: pointer;
+			}
+			.dom-pull .box .pic img{
+				width: 234px;
+			}
+			.dom-pull p{
+				line-height: 18px;
+				padding: 0 10px;
+				margin: 10px 0;
+				font-size: 12px;
+				word-wrap: break-word;
+			}
+			.dom-pull .box .cover{
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(255,255,255,0.3);
+				display: none;
+			}
+			.dom-pull .box .btn-box{
+				position: absolute;
+				top: 6px;
+				left: 6px;
+				right: 6px;
+				z-index: 3;
+				display: none;
+			}
+			.dom-pull .box .btn-box .collect{
+				position: absolute;
+				top:0;
+				left: 0;
+				line-height: 30px;
+				background-color: #e53e49;
+				padding: 0 12px;
+				color:white;
+				text-decoration: none;
+			}
+			.dom-pull .box .btn-box .like{
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 30px;
+				width: 30px;
+				background-color: white;
+				border-radius: 5px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.dom-pull .box .btn-box .like .heart{
+				display: inline-block;
+				height: 12px;
+				width: 12px;
+				background: url(img/action_like.png) no-repeat;
+			}
+			
+			/* 浮动0 */
+			.elevator-item{
+				position: fixed;
+				right: 15px;
+				bottom: 10px;
+				z-index: 1000;
+				opacity: 1;
+				
+			}
+			.elevator-item .elevator{
+				height: 40px;
+				width: 40px;
+				display: inline-block;
+				background: url(img/sele_arrow.png) 0 -110px no-repeat;
+				background-size: cover;
+				margin-bottom: 4px;
+				display: none;
+			}
+			.elevator-item .plus{
+				height: 40px;
+				width: 40px;
+				display: inline-block;
+				background: url(img/icon_add_rbig.png) 0 -67px no-repeat;
+				background-size: cover;
+				
+			}
+			/* 浮动1 */
+
+			/* 登录面板0 */
+			.mask{
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,0.5);
+				z-index: 999;
+				display: none;
+			}
+			.mask .mask-center{
+				width: 520px;
+				height: 420px;
+				background-color: #FFFFff;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				border-radius: 5px;
+				padding: 30px;
+				box-sizing: border-box;
+				text-align: center;
+			}
+			.mask .mask-center .center_box{
+				width: 286px;
+				margin: 20px auto 0;
+				}
+			.mask .mask-center .close-btn{
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				background: url(img/msg_close.png) 0 0 no-repeat;
+				background-size: cover;
+				width: 20px;
+				height: 20px;
+				
+			}
+			.mask .mask-center .logo-img{
+				display: block;
+				width: 106px;
+				margin: 0 auto;
+			}
+			.mask .mask-center .txtBox{
+				text-align: center;
+				color: #666;
+			}
+			.mask .mask-center .txtBox span:first-child{
+				display: inline-block;
+				width: 60px;
+				border-bottom: 1px solid #666;
+				margin-top: 10px;
+			}
+			.mask .mask-center .txtBox span:last-child{
+				display: inline-block;
+				width: 60px;
+				border-bottom: 1px solid #666;
+				margin-top: 10px;
+			}
+			.mask .mask-center .buttons{
+				text-align: center;
+				margin: 5px 0;
+			}
+			.mask .mask-center .buttons a{
+				width: 50px;
+				height: 50px;
+				background: red;
+				display: inline-block;
+			}
+			.mask .mask-center .buttons a:nth-child(1){
+				background: url(img/icons_login_fixbg.png) 0 0 no-repeat;
+			}
+			.mask .mask-center .buttons a:nth-child(2){
+				background: url(img/icons_login_fixbg.png) -60px 0 no-repeat;
+			}
+			.mask .mask-center .buttons a:nth-child(3){
+				background: url(img/icons_login_fixbg.png) -120px 0 no-repeat;
+			}
+			.mask .mask-center .buttons a:nth-child(4){
+				background: url(img/icons_login_fixbg.png) -180px 0 no-repeat;
+			}
+			.mask .mask-center .mail-login{
+				text-align: center;
+			}
+			.mask .mask-center .clear-input{
+				width: 260px;
+				height: 30px;
+				margin: 5px 0;
+				padding: 5px 5px;
+				border-radius: 5px;
+				background-color: #eee;
+				font-size: 16px;
+				border: 1px solid #ccc;
+				box-sizing: border-box;
+			}
+			.mask .mask-center .mail-login .text{
+				display: inline-block;
+				width: 260px;
+				height: 40px;
+				background-color: red;
+				color: white;
+				line-height:40px;
+				margin-bottom: 5px;
+				border-radius: 5px;
+			}
+			.mask .mask-center .switch-back,.red-link{
+				display: inline;
+				text-decoration: none;
+				font-size: 14px;
+
+			}
+			.red-link{
+				color: tomato;
+			} 
+			
+			/* 登录面板1 */
+
+
+		</style>
+	</head>
+	<body>
+		<div id="page" class="page">
+			<!-- 头部 -->
+			<header id="header" class="header">
+				<div id="header_in" class="header-in">
+					<div class="header-left">
+						<ul>
+							<li class="logo-pic"><h1><a href=""></a></h1></li>
+							<li><a href="">发现</a></li>
+							<li><a href="">最新</a></li>
+							<li><a href="">美素</a></li>
+							<li><a href="">活动<span class="new">new</span></a></li>
+							<li><a href="">教育</a></li>
+							<li><a href="">...</a></li>
+						</ul>
+					</div>
+					<div class="header-center">
+						<input type="text" name="query" id="query" placeholder="搜索你喜欢的" value="" />
+					</div>
+					<div class="header-right">
+						<a href="javascript:;" class="register" id="register">
+							<span class="text">注册</span>
+						</a>
+						<a href="javascript:;" class="login" id="login">
+							<span class="text">登录</span>
+						</a>
+					</div>
+				</div>
+			</header>
+			<!-- 中间广告切换 -->
+			<section id="slider_banner" class="slider-banner">
+				<ul>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+			</section>
+			<!-- 快速登录 -->
+			<section id="quick_login" class="quick-login">
+				<div class="quick-login-in">
+					<div class="intro">
+						<div class="title">花瓣，陪你做生活的设计师</div>
+						<div>花瓣，陪你做生活的设计师</div>
+					</div>
+					<div class="login_icon">
+						<ul>
+							<li><a href=""><span></span></a></li>
+							<li><a href=""><span></span></a></li>
+							<li><a href=""><span></span></a></li>
+							<li><a href=""><span></span></a></li>
+						</ul>
+						<div class="tip_text">
+							<span class="line_left"></span>
+							<span class="text">使用第三方帐号登录</span>
+							<span class="line_right"></span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- 吸顶效果 -->
+			<section id="top_nav" class="top-nav">
+				<div class="top-nav-in">
+					<div class="left">
+						<p>花瓣，陪你做生活的设计师</p>
+						<p>花瓣，陪你做生活的设计师</p>
+					</div>
+					<div class="right">
+						<ul>
+							<li><p>使用第三方帐号登录</p></li>
+							<li><a href=""></a></li>
+							<li><a href=""></a></li>
+							<li><a href=""></a></li>
+							<li><a href=""></a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- 类型标题 -->
+			<section id="type_title" class="type-title">
+				<div class="type-title-in">
+					<span class="line-left"></span>
+					<span>美图</span>
+					<span class="line-right"></span>
+				</div>
+			</section>
+			<!-- 选项卡 -->
+			<div id="tab" class="tab">
+				<div id="tab_header" class="tab-header">
+					<ul>
+						<li class="current">采集</li>
+						<li>推荐画板</li>
+						<li>推荐用户</li>
+					</ul>
+				</div>
+				<div id="tab_content" class="tab-content">
+					<div class="dom" style="display: block;">
+						<div class="dom_top">
+							<ul>
+								<li><a href="" title="花瓣"></a></li>
+								<li><a href="" title="花瓣"></a></li>
+								<li><a href="" title="花瓣"></a></li>
+								<li><a href="" title="花瓣"></a></li>
+								<li><a href="" title="花瓣"></a></li>
+							</ul>
+						</div>
+						<div id="dom_pull" class="dom-pull">
+							<!-- <div class="box">
+								<div class="pic">
+									<img src="img/6.jpg" alt="">
+									<div class="cover"></div>
+								</div>
+								<p>花瓣，陪你做生活的设计师</p>
+								<div class="btn-box">
+									<a href="" class="collect">采集</a>
+									<a href="" class="like">
+										<span class="heart"></span>
+									</a>
+								</div>
+							</div> -->
+						</div>
+					</div>
+					<div class="dom">
+						2
+					</div>
+					<div class="dom">
+						3
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 右边浮动 -->
+		<div id="elevator_item" class="elevator-item">
+			<a href="javascript:;" id="elevator" class="elevator" title="回到顶部"></a><br>
+			<a href="" class="plus"></a>
+		</div>
+		<!-- 登录面板 -->
+		<section id="mask" class="mask">
+			<div id="mask_center" class="mask-center">
+				<!-- 关闭 -->
+				<a href="javascript:;" id="close_btn" class="close-btn"></a>
+				<!-- login -->
+				<img src="img/login_logo.png" alt="" class="logo-img">
+				<div class="center_box">
+					<div class="txtBox">
+						<span></span>
+						<span class="txt">使用第三方登录</span>
+						<span></span>
+					</div>
+
+				<div class="buttons">
+					<a href=""></a>
+					<a href=""></a>
+					<a href=""></a>
+					<a href=""></a>
+				</div>
+				<div class="txtBox">
+					<span></span>
+					<span class="txt">使用手机号登录</span>
+					<span></span>
+				</div>
+				<form action="" class="mail-login">
+					<input type="text" placeholder="输入手机号" class="clear-input"/>
+					<input type="password" placeholder="密码" class="clear-input"/>
+					<a href="" >
+						<span class="text">登录</span>
+					</a>
+				</form>
+				<a href="" class="switch-back red-link">忘记密码</a>
+				<div class="switch-back">
+					还没有花瓣账号？
+					<a href="" class="red-link">点击注册</a>
+				</div>
+			</div>
+			</div>
+		</section>
+	</body>
+	<script src="Mytool/Mytool.js"></script>
+	<script src="new_file.js"></script>
+	<script type="text/javascript">
+	
+		(function(){
+			// 选项卡
+			tab();
+			
+			// 动态创建元素
+			autoCreateImg();
+			
+			// 瀑布流
+			window.onload=function(){
+				waterFull("dom_pull");
+			}
+			
+			// 窗口滚动
+			window.onscroll=function(){
+				
+				if(jiazai("dom_pull")){
+					autoCreateImg();
+					waterFull("dom_pull");
+				}
+				
+				// 导航滚动
+				var scrollTop=mytool.scroll().top;
+				if(scrollTop>=150){
+					$("top_nav").style.display="block";
+					$("elevator").style.display="block";
+				}else{
+					$("top_nav").style.display="none";
+					$("elevator").style.display="none";
+				}
+				
+				// 滚回顶部
+				$("elevator").onclick=function(){
+					mytool.buffer(document.documentElement,{scrollTop:0},null);
+				}
+				
+			}
+			
+			// 监听按钮点击
+			$("login").onclick=function(){
+				$("mask").style.display="block";
+			}
+			$("close_btn").onclick=function(){
+				$("mask").style.display="none";
+			}
+			
+			bannerAutoPlay();
+			
+		
+		})();
+		
+		
+		function bannerAutoPlay(){
+			var lis=$("slider_banner").getElementsByTagName("li");
+			var index=0;
+			
+			 setInterval(function(){
+				for(var i=0;i<lis.length;i++){
+					var li=lis[i];
+					li.style.opacity=0;
+					
+				}
+				mytool.buffer(lis[index],{"opacity":1},null);
+				
+				index++;
+				if(index===lis.length){
+					index=0;
+				}
+				
+			 },3000)
+		}	
+		
+		
+		
+		function autoCreateImg(){
+			var str,text,pic,htmlStr;
+			// 数据
+			var json=[
+				{text:"花瓣，陪你做生活的设计师",pic:"img/10.jpg"},
+				{text:"花瓣，陪你做生活的设计师",pic:"img/11.jpg"},
+				{text:"花瓣，陪你做生活的设计师",pic:"img/12.jpg"},
+				{text:"花瓣，陪你做生活的设计师",pic:"img/13.jpg"},
+				{text:"花瓣，陪你做生活的设计师",pic:"img/14.jpg"},
+				{text:"花瓣，陪你做生活的设计师",pic:"img/15.jpg"},
+				{text:"花瓣，陪你做生活的设计师",pic:"img/16.jpg"},
+				{text:"花瓣，陪你做生活的设计师",pic:"img/17.jpg"},
+				{text:"花瓣，陪你做生活的设计师",pic:"img/18.jpg"},
+				{text:"花瓣，陪你做生活的设计师",pic:"img/6.jpg"},
+				{text:"花瓣，陪你做生活的设计师",pic:"img/12.jpg"},
+				{text:"花瓣，陪你做生活的设计师",pic:"img/6.jpg"},
+				{text:"花瓣，陪你做生活的设计师",pic:"img/15.jpg"},
+				{text:"花瓣，陪你做生活的设计师",pic:"img/6.jpg"},
+				{text:"花瓣，陪你做生活的设计师",pic:"img/13.jpg"},
+				{text:"花瓣，陪你做生活的设计师",pic:"img/6.jpg"},
+				{text:"花瓣，陪你做生活的设计师",pic:"img/17.jpg"},
+				{text:"花瓣，陪你做生活的设计师",pic:"img/18.jpg"}
+				];
+				
+				for(var i=0;i<json.length;i++){
+					str=$("dom_pull").innerHTML;
+					text=json[i].text;
+					pic=json[i].pic;
+					
+					htmlStr="<div class='box'>"+
+								"<div class='pic'>"+
+									"<img src="+pic+" alt=''>"+
+									"<div class='cover'></div>"+
+								"</div>"+
+								"<p>"+text+"</p>"+
+								"<div class='btn-box'>"+
+									"<a href='' class='collect'>采集</a>"+
+									"<a href='' class='like'>"+
+										"<span class='heart'></span>"+
+									"</a>"+
+								"</div>"+
+							"</div>";
+						
+					str+=htmlStr;
+					$("dom_pull").innerHTML=str;
+					
+					var wrapBox=$("dom_pull").getElementsByClassName("box")
+					var wrappic=$("dom_pull").getElementsByClassName("pic")
+					for(var j=0;j<wrapBox.length;j++){
+						wrapBox[j].onmouseover=function(){
+							this.childNodes[2].style.display="block";
+						}
+						wrapBox[j].onmouseout=function(){
+							this.childNodes[2].style.display="none";
+						}
+						wrappic[j].onmouseover=function(){
+							this.childNodes[1].style.display="block";
+						}
+						wrappic[j].onmouseout=function(){
+							this.childNodes[1].style.display="none";
+						}
+						
+			
+					}
+					
+				}
+				
+				
+		}
+		
+		
+		function tab(){
+			var lis=$("tab_header").getElementsByTagName("li");
+			var doms=$("tab_content").getElementsByTagName("div");
+			var lastOne=0;
+			for(var i=0;i<lis.length;i++){
+				var li=lis[i];
+				(function(i){
+					li.onmousedown=function(){
+						lis[lastOne].className="";
+						doms[lastOne].style.display="none";
+						this.className="current";
+						doms[i].style.display="block";
+						lastOne=i;
+					}
+				})(i)
+				
+			}
+		}
+		
+		
+		function $(id){
+			return typeof id==="string" ?document.getElementById(id):null;
+		}
+		
+	</script>
+</html>

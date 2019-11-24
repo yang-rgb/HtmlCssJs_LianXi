@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "w-xianag":"/comom/xiangshang/xiangshang"
+  },
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark"
+}

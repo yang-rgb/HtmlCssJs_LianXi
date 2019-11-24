@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue</title>
+		<link rel="stylesheet" type="text/css" href="css/new_file.css"/>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body style="height: 2000px;">
+		<div id="app-vue">
+			<h1>{{name}}</h1>
+			<p>{{greet(" www")}}</p>
+			<a v-bind:href="web">web123</a>
+			<p v-html="html"></p>
+			<br>
+			<br>
+			<button v-on:click="age(2)">1</button>
+			<p>{{agee}}</p>
+			<div class="box" v-on:mousemove="upxy">
+				{{x}},{{y}}
+			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<input ref="ipt" type="text" v-on:keyup="dddd" />
+			<span>{{iput}}</span>
+			<br>
+			<br>
+			<input  type="text" v-model="iput1" />
+			<span>{{iput1}}</span>
+		</div>
+		
+		<script src="js/new_file.js"></script>
+	</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html{
+			font-size: 10px;
+		}
+		body{
+			font-size: 1.6rem;
+			background-color: whitesmoke;
+		}
+		
+		.bd-layout{
+			width:100%;
+			height: 100%;
+		}
+		.header{
+			width: 100%;
+			height: 4rem;
+			background-color: #fff;
+			border-bottom: 0.1rem solid #ccc;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			
+			position: fixed;
+			left: 0;
+			top: 0;
+		}
+		.bd-content{
+			margin-top: 5rem;
+		}
+		.cell1{
+			background-color: #fff;
+			border-bottom: #CCCCCC 0.1rem solid;
+		}
+		.cell1-center{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			padding: 0.2rem 0.5rem;
+		}
+	
+		.cell1-center>div{
+			padding:0 0.5rem;
+		}
+		.cell1-center>div>img{
+			width: 100%;
+			height: 6rem;
+		}
+		
+		.cell2{
+			background-color: #FFFFFF;
+			padding: 0.5rem;
+			border-bottom: 0.1rem solid #F5F5F5;
+			
+			display: flex;
+		}
+		.cell2-left{
+			flex: 2;
+			
+		}	
+		.cell2-left>img{
+			width: 100%;
+			height: 8rem;
+		}
+		.cell2-right{
+			flex: 3;
+			
+		}
+		.cell2-right{
+			display: flex;
+			flex-wrap: wrap;
+			align-content:space-between ;
+			
+		}
+		.cell2-right-top p{
+			height: 3rem;
+			/* overflow: hidden; */
+			text-overflow: ellipsis;
+			
+		}
+		</style>
+	</head>
+	<body>
+		<div class="bd-layout">
+			<div class="header">
+				<span>关注</span>
+				<span>热点</span>
+				<span>视频</span>
+				<span>军事</span>
+				<span>主题</span>
+			</div>
+			<div class="bd-content">
+				<div class="cell1">
+					<div class="cell1-top">topotoptop</div>
+					<div class="cell1-center">
+						<div><img src="img/touxiang_img.png" alt=""></div>
+						<div><img src="img/touxiang_img.png" alt=""></div>
+						<div><img src="img/touxiang_img.png" alt=""></div>
+					</div>
+					<div class="cell1-bottom">
+						<span>dddddd</span>
+						<span>11-21</span>
+					</div>
+				</div>
+				<div class="cell2">
+					<div class="cell2-left"><img src="img/touxiang_img.png" ></div>
+					<div class="cell2-right">
+						<div class="cell2-right-top">
+							<p>哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒哒</p>
+						</div>
+						<div class="cell2-right-bottom">
+							<span>环圈网</span>
+							<span>11-23</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+	</body>
+</html>

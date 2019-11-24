@@ -1,0 +1,128 @@
+{
+  "id": "1447026",
+  "name": "bilibili",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1314407",
+      "name": "夜间",
+      "font_class": "yejian",
+      "unicode": "e66d",
+      "unicode_decimal": 58989
+    },
+    {
+      "icon_id": "2088403",
+      "name": "zhibo",
+      "font_class": "zhibo",
+      "unicode": "e68e",
+      "unicode_decimal": 59022
+    },
+    {
+      "icon_id": "2572097",
+      "name": "huiyuan",
+      "font_class": "huiyuan",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "4413788",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "6223378",
+      "name": "主题",
+      "font_class": "zhuti",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    },
+    {
+      "icon_id": "7398822",
+      "name": "xiazai",
+      "font_class": "xiazai",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "8069441",
+      "name": "稍后在做",
+      "font_class": "shaohouzaizuo",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "8156370",
+      "name": "lishi",
+      "font_class": "lishi-",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "9040278",
+      "name": "伞",
+      "font_class": "sanzhuanhuan",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "9537921",
+      "name": "40-短信内容免流",
+      "font_class": "-duanxinneirongmianliu",
+      "unicode": "e774",
+      "unicode_decimal": 59252
+    },
+    {
+      "icon_id": "9654137",
+      "name": "shouye",
+      "font_class": "shouye",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "9723554",
+      "name": "xingji",
+      "font_class": "xingji",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "10020433",
+      "name": "热门关键词",
+      "font_class": "remen",
+      "unicode": "e6a3",
+      "unicode_decimal": 59043
+    },
+    {
+      "icon_id": "10138383",
+      "name": "制定方案",
+      "font_class": "zhidingfangan",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "10538492",
+      "name": "lianxikefu",
+      "font_class": "lianxikefu",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "11019466",
+      "name": "创作",
+      "font_class": "chuangzuo",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "11482253",
+      "name": "征稿投稿",
+      "font_class": "zhenggaotougao-copy",
+      "unicode": "e775",
+      "unicode_decimal": 59253
+    }
+  ]
+}

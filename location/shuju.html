@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div"></div>
+		<script type="text/javascript">
+			var div=document.getElementById("div")
+			var ert=location.search.substr(1);
+			var rty=ert.split("=");
+			console.log(rty)
+			div.innerHTML=rty[1];
+		</script>
+	</body>
+</html>

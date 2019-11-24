@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/shouye/shouye",
+    "pages/logo/logo",
+    "pages/detal/detal",
+    "pages/cart/cart",
+    "pages/fenlei/fenlei",
+    "comom/xiangshang/xiangshang",
+    "comom/searchbar/searchbar"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff6666",
+    "navigationBarTitleText": "小程序",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#ff6666",
+    "list": [
+      {
+        "pagePath": "pages/shouye/shouye",
+        "text": "首页",
+        "iconPath": "img/shouye.png",
+        "selectedIconPath": "img/shouye1.png"
+      },
+      {
+        "pagePath": "pages/fenlei/fenlei",
+        "text": "分类",
+        "iconPath": "img/fenlei.png",
+        "selectedIconPath": "img/fenlei1.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "img/dongtai.png",
+        "selectedIconPath": "img/dongtai1.png"
+      },
+      {
+        "pagePath": "pages/logo/logo",
+        "text": "我的",
+        "iconPath": "img/huiyuangou.png",
+        "selectedIconPath": "img/huiyuangou1.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

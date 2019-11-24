@@ -1,0 +1,7 @@
+/* comom/xiangshang/xiangshang.wxss */
+.imagseer{
+  width: 100rpx;
+  position: fixed;
+  bottom: 10rpx;
+  right: 10rpx;
+}

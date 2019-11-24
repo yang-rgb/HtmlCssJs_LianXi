@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- <form action="http://127.0.0.1/" method="get">
+			<p>姓名:<input type="text" name="name"/></p>
+			<p>年龄:<input type="text" name="age"/></p>
+			<p>
+				<input type="radio" name="sex" value="男"/>男
+				<input type="radio" name="sex" value="女"/>女
+			</p>
+			
+			<input type="submit" value="提交"/>
+		</form> -->
+		
+		<form action="http://127.0.0.1/postmsg" method="post" enctype="multipart/form-data">
+			<p>姓名:<input type="text" name="name"/></p>
+			<p>年龄:<input type="text" name="age"/></p>
+			<p>
+				性别：
+				<input type="radio" name="sex" value="男"/>男
+				<input type="radio" name="sex" value="女"/>女
+			</p>
+			<p>
+				学科：
+				<input type="checkbox" name="college" value="html"/>html
+				<input type="checkbox" name="college" value="python"/>python
+				<input type="checkbox" name="college" value="java"/>java
+			</p>
+			<p>
+				<input type="file" name="uploadImg"/>
+			</p>
+			<input type="submit" value="提交"/>
+		</form>
+	</body>
+</html>

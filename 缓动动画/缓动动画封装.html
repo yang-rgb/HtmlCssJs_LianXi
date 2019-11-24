@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>缓动动画封装</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="button" type="button">点击右走</button>
+		<button id="button1" type="button">点击左走</button>
+
+		<div id="box"></div>
+	</body>
+	<script src="Mytool/Mytool.js"></script>
+	<script type="text/javascript">
+		window.addEventListener("load",function(){
+			var box=mytool.$("box")
+			mytool.$("button").addEventListener("click",function(){
+				mytool.buffer(box,{"left":800,"height":300,"top":600,"opacity":0.2},function(){
+					mytool.buffer(box,{"left":100,"height":150,"top":200,"opacity":1},null);
+				});
+			})
+			
+		})
+		
+		
+		// function buffer(eleObj,json,fn){
+		// 	
+		// 	var speed=0,begin=0,target=0,flag=false;
+		// 	
+		// 	clearInterval(eleObj.timer);
+		// 	eleObj.timer=setInterval(function(){
+		// 		
+		// 		flag=true;
+		// 		for (var key in json){
+		// 			
+		// 				if(key==="opacity"){
+		// 					begin=parseInt(mytool.getStyleAttr(eleObj,key)*100)||100;
+		// 					target=parseInt(json[key]*100);
+		// 				}else{
+		// 					begin=parseInt(mytool.getStyleAttr(eleObj,key))||0;
+		// 					target=parseInt(json[key]);
+		// 				}
+		// 				
+		// 				
+		// 				speed=(target-begin)*0.2;
+		// 				speed=(target>begin)?Math.ceil(speed):Math.floor(speed);
+		// 					
+		// 				if(key==="opacity"){
+		// 					eleObj.style.opacity=(begin+speed)/100;
+		// 				}else{
+		// 					eleObj.style[key]=begin+speed+"px";
+		// 				}
+		// 				
+		// 				if(begin!==target){
+		// 					flag=false;
+		// 				}
+		// 			}
+		// 			if(flag){
+		// 				clearInterval(eleObj.timer);
+		// 				
+		// 				fn && fn();
+		// 			}
+		// 		},20)
+		// 		
+		// }
+		// 
+		
+		
+		
+	</script>
+</html>

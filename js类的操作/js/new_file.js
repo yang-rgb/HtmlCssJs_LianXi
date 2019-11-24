@@ -5,8 +5,8 @@ btno1.onclick=function(){
 	
 	// addClass(box,"b2");
 	
-	// removeClass(box,"b2");
-	toggleClass(box,"b2")
+	removeClass(box,"r6");
+	// hasClass(box,"r6")
 
 }
 
@@ -27,15 +27,16 @@ function addClass(obj,cn){
 function hasClass(obj,cn){
 	// var reg=/\bb2\b/
 	var reg=new RegExp("\\b"+cn+"\\b");
-	
+	console.log(obj.className) 
 	return reg.test(obj.className);
 }
 
 // 删除一个元素中的指定的clss属性
 function removeClass(obj,cn){
-	var reg=new RegExp("\\b"+cn+"\\b");
-	
+	var reg=new RegExp("\\b"+cn+"\\b"); 
 	// 删除class
+	console.log(obj.className+"w") 
+	console.log(obj.className.replace(reg,""))
 	obj.className=obj.className.replace(reg,"")
 }
 

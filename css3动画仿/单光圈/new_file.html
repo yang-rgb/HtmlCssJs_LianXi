@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>单光圈</title>
+		<style type="text/css">
+			body{
+				position: relative;
+				background: #ccc;
+			}
+			.div1{
+				
+				width: 12rem;
+				height: 12rem;
+				border-radius: 12rem;
+				box-shadow: 0 0.3rem 0 #00abf2 inset;
+				animation: div1 2s linear infinite;
+			}
+			.div2{
+				width: 12rem;
+				height: 12rem;
+				border-radius: 12rem;
+				box-shadow: 0 0 0.5rem 4px rgba(0, 0, 0, 0.3) inset;
+			}
+			.div1,.div2{
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: 0 auto;
+			}
+			
+			@keyframes div1{
+				from{
+					transform: rotate(0deg);
+				}
+				to{
+					transform: rotate(360deg);
+
+				}
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="div1"></div>
+		<div class="div2"></div>
+
+	</body>
+</html>

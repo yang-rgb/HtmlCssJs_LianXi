@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>电商切换</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			img{
+				width: 90px;
+				height: 70px;
+			}
+			div{
+				width: 500px;
+				height: 70px;
+				margin: 100px auto;
+				border: 1px solid #ccc;
+				background: url(img/1.jpg) no-repeat;
+				background-size:100% 370px;
+				padding-top: 370px;
+			}
+			ul{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				cursor: pointer;
+			}
+		</style>
+		<script type="text/javascript">
+			
+			
+			window.onload=function(){
+				var box1=document.getElementById("box1");
+				var list=box1.getElementsByTagName("li");
+			
+				for(var i=0; i<list.length; i++){
+					var sli=list[i];
+					
+				(function(tag){
+					sli.onmouseover=function(){
+						box1.style.background="url(img/"+tag+".jpg) no-repeat"
+					}
+					
+				})(i+1)
+					
+					
+				}
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			// window.onload=function(){
+			// 	var box1=document.getElementById("box1");
+			// 	var list=box1.getElementsByTagName("li");
+			// 
+			// 	for(var i=0; i<list.length; i++){
+			// 		var sli=list[i];
+			// 		console.log(list[i]); 
+			// 		sli.inex=i+1;
+			// 		sli.onmouseover=function(){
+			// 				console.log(this.inex);
+			// 				box1.style.background="url(img/"+this.inex+".jpg) no-repeat"
+			// 		}
+			// 		
+			// 	}
+			// }
+			// 
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	
+			
+			
+			
+			// window.onload=function(){
+			// 	var box1=$("box1");
+			// 	var li01=$("li01");
+			// 	var li02=$("li02");
+			// 	var li03=$("li03");
+			// 	var li04=$("li04");
+			// 	var li05=$("li05");
+			// 	
+			// 	li01.onmouseover=function(){
+			// 		changeimg("box1",1);
+			// 	};
+			// 	li02.onmouseover=function(){
+			// 		changeimg("box1",2);
+			// 	};
+			// 	li03.onmouseover=function(){
+			// 		changeimg("box1",3);
+			// 	};
+			// 	li04.onmouseover=function(){
+			// 		changeimg("box1",4);
+			// 	};
+			// 	li05.onmouseover=function(){
+			// 		changeimg("box1",5);
+			// 	};
+			// 	
+			// 	
+			// 	
+			// function changeimg(liid,index){
+			// 	$(liid).style.background="url(img/"+index+".jpg) no-repeat"
+			// }	
+			// 
+			// function $(id){
+			// 	return typeof id === "string" ? document.getElementById(id):null;
+			// }
+				
+			// }
+		</script>
+	</head>
+	<body>
+		<div id="box1">
+			<ul id="uld">
+				<li id="li01"><img src="img/1.jpg" alt=""></li>
+				<li id="li02"><img src="img/2.jpg" alt=""></li>
+				<li id="li03"><img src="img/3.jpg" alt=""></li>
+				<li id="li04"><img src="img/4.jpg" alt=""></li>
+				<li id="li05"><img src="img/5.jpg" alt=""></li>
+			</ul>
+		</div>
+	</body>
+</html>

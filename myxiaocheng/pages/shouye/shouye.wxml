@@ -1,0 +1,99 @@
+<!--pages/shouye/shouye.wxml-->
+
+<navigator url="/comom/searchbar/searchbar">
+<view class="suosuo">
+  <image class="suosuotu" src="/images/suosuo.png" mode="widthFix"></image>
+  <text class="suosuotext">手机</text>
+</view>  
+</navigator>
+
+<view class="lunbo">
+  <swiper 
+        autoplay
+        circular
+        interval="3000"
+        indicator-dots 
+        indicator-color="white"
+        indicator-active-color="#ff6666"
+        >
+   <swiper-item>
+    <image src="/images/temp/banner1.jpg" ></image>
+   </swiper-item>
+   <swiper-item>
+    <image src="/images/temp/banner2.jpg"></image>
+   </swiper-item>
+   <swiper-item>
+    <image src="/images/temp/banner3.jpg"></image>
+   </swiper-item>
+   <swiper-item>
+    <image src="/images/temp/banner4.jpg"></image>
+   </swiper-item> 
+
+  </swiper>
+</view>
+
+<view class="navye">
+<swiper 
+
+  bindchange="chhua"
+  class="navheight"
+  indicator-color="white"
+  indicator-active-color="#ff6666"
+  >
+  <swiper-item class="navheight">
+  <view class="nav">
+    <view class="navzi" wx:for="{{navlist}}" wx:key="{{index}}">
+      <image src="{{item.src}}"></image>
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+  </swiper-item>
+<swiper-item class="navheight">
+<view class="nav">
+  <view class="navzi" wx:for="{{navlist}}" wx:key="{{index}}">
+    <image src="{{item.src}}"></image>
+    <text>{{item.title}}</text>
+  </view>
+</view>
+</swiper-item>
+
+</swiper>
+<view class="fenye">
+    <text class="{{fenye=='0'?'text1':''}}"></text>
+    <text  class="{{fenye=='1'?'text1':''}}" ></text>
+  </view>
+</view>
+
+<view class="hangn">
+<scroll-view scroll-x class="{{fiedfalse?'fiexd':''}}">
+<view class="hengnav" id="hengnav">
+  <view 
+      class="navbiao"  
+      wx:for="{{navdata}}" 
+      wx:key="{{index}}"
+      id="{{index}}"
+      bindtap="clickdian"
+      >
+    <text
+      class="navbiaotext {{chock==index ?'navclass':''}} ">{{item.name}}</text>
+    <text
+     
+     class="navbiaotext2 {{chock==index ?'navclass2':''}} ">{{item.na}}</text>
+  </view> 
+</view>
+</scroll-view>
+</view>
+
+<view class="Prod">
+    <navigator url="/pages/detal/detal?id={{index}}" class="Prodzi" wx:for="{{producrlist}}" wx:key="{{index}}">
+      <image src="{{item.src}}" mode="widthFix"></image>
+      <view class="biaoti">
+        <text>{{item.name}}</text>
+        <text class="jiage">{{item.price}}</text>
+      </view>
+    </navigator>
+  
+</view>
+
+<w-xianag wx:if="{{shoeuxian}}" />
+

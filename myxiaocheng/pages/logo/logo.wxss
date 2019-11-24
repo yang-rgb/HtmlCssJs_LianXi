@@ -1,0 +1,43 @@
+.viewzong{
+  padding: 10px;
+  
+}
+.viewtop{
+  display: flex;
+  justify-content: center;
+  font-size: 40rpx;
+  margin-bottom: 20rpx;
+}
+input{
+  border: 1px solid #ccc;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  
+ 
+}
+.place{
+  font-size: 35rpx;
+}
+.yanzheng{
+  display: flex;
+  margin-top: 20rpx;
+  justify-content: space-between;
+}
+.yanma{
+  flex: 1;
+  margin-right: 20rpx;
+}
+.huoyan{
+  color: white;
+  background: #ff6666;
+  font-size: 25rpx;
+}
+
+.login{
+  margin-top: 20rpx;
+  color: white;
+  background: #ff6666;
+}
+.dianjitai{
+  background: #ff9999;
+}

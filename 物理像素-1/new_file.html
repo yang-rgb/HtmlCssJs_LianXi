@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>物理像素-1</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 100%;
+				height: 1px;
+				background: black;
+				margin-top: 100px;
+			}
+			.box1{
+				width: 100%;
+				height: 1px;
+				background: black;
+				margin-top: 200px;
+			}
+			@media only screen and (-webkit-device-pixel-ratio:2) {
+				.box{
+					-webkit-transform: scaleY(0.5);
+				}
+			}
+			
+			@media only screen and (-webkit-device-pixel-ratio:3) {
+				.box{
+					transform: scaleY(0.33333333);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<div class="box1"></div>
+	</body>
+</html>

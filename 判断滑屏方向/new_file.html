@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;	
+			}
+			div{
+				width: 500px;
+				height: 500px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+	<script type="text/javascript">
+		var div=document.querySelector("div");
+		
+		
+		var startX,startY,moveEndX,moveEndY,X,Y;
+		div.addEventListener("touchstart",function(e){
+			e=e||event;
+			e.preventDefault;
+			startX=e.targetTouches[0].pageX;
+			startY=e.targetTouches[0].pageY;
+		})
+		div.addEventListener("touchmove",function(e){
+			e=e||event;
+			e.preventDefault;
+			moveX=e.targetTouches[0].pageX;
+			moveY=e.targetTouches[0].pageY;
+		
+			
+			});
+			
+			div.addEventListener("touchend",function(e){
+				e=e||event;
+				e.preventDefault;
+				X=moveX-startX;
+				Y=moveY-startY;
+				
+					if(X>0){
+						console.log("向右");
+					}else{
+						console.log("向左");
+					}
+					if(Y>0){
+						console.log("向下");
+					}else{
+						console.log("向上");
+					}
+			
+		})
+		
+	</script>
+</html>

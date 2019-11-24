@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>无缝滑屏</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{height: 100%;overflow: hidden;}
+			#wrap{height: 100%;overflow: hidden;}
+			.carousel-wrap{position: relative;}
+			.carousel-wrap>.list{list-style: none;overflow: hidden;position: absolute;}
+			.carousel-wrap>.list>li>a,.carousel-wrap>.list>li>a>img{display: block;}
+			.carousel-wrap>.list>li>a>img{width: 100%;}
+			.carousel-wrap>.list>li{float: left;}
+			.carousel-wrap>.points-wrap{position: absolute;bottom: 0;width: 100%;text-align: center;z-index: 1;}
+			.carousel-wrap>.points-wrap>span{display: inline-block;width: 10px;height: 10px;background-color: #666;border-radius: 50%;margin-left: 5px;}
+			.carousel-wrap>.points-wrap>.active{background: red;}
+		</style>
+		
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="carousel-wrap">
+				<div class="points-wrap"></div>
+			</div>
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		
+		window.onload=function(){
+			document.documentElement.addEventListener("touchstart",function(ev){
+				ev=ev||event;
+				// ev.preventDefault();
+			});
+			
+			var arr=["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg"];
+			
+			carousel(arr);
+			function carousel(arr){
+				var carouselWrap=document.querySelector(".carousel-wrap");
+				
+				if(carouselWrap){
+					var ulNode=document.createElement("ul");
+					var styleNode=document.createElement('style');
+					ulNode.classList.add("list");
+					for(var i=0;i<arr.length;i++){
+						ulNode.innerHTML+='<li>'
+												+'<a href="javascript:;">'
+													+'<img src="'+arr[i]+'">'
+												+'</a>'
+											+'</li>';
+					}
+					styleNode.innerHTML=".carousel-wrap>.list>li{width: "+(1/arr.length*100)+"%;}.carousel-wrap>.list{width: "+arr.length*100+"%;}";
+					carouselWrap.appendChild(ulNode);
+					document.head.appendChild(styleNode);
+					
+					var imgs=document.querySelector(".carousel-wrap>.list>li>a>img");
+					setTimeout(function() {
+						carouselWrap.style.height=imgs.offsetHeight+"px";
+					}, 100);
+					
+					var pointsWrap=document.querySelector(".carousel-wrap>.points-wrap");
+					if(pointsWrap){
+						for(var i=0;i<arr.length;i++){
+							if(i==0){
+								pointsWrap.innerHTML+='<span class="active"></span>';
+							}else{
+								pointsWrap.innerHTML+='<span></span>';
+							}
+						}
+						var pointSpans=document.querySelectorAll(".carousel-wrap>.points-wrap>span");
+						
+						
+					}
+					
+					
+					
+					var startX=0;
+					var elementX=0;
+					var disX=0;
+					carouselWrap.addEventListener("touchstart",function(ev){
+						ev=ev||event;
+						ulNode.style.transition="none";
+						var TouchC=ev.changedTouches[0];
+						startX=TouchC.clientX;
+						elementX=ulNode.offsetLeft;
+						
+					})
+					carouselWrap.addEventListener("touchmove",function(ev){
+						ev=ev||event;
+						var TouchC=ev.changedTouches[0];
+						var nowX=TouchC.clientX;
+						disX=nowX-startX;
+						ulNode.style.left=elementX+disX+"px";	
+						
+					})
+					carouselWrap.addEventListener("touchend",function(ev){
+						ev=ev||event;
+						
+						var index=ulNode.offsetLeft/document.documentElement.clientWidth;
+						index=Math.round(index);
+						
+						// 超出控制
+						if(index>0){
+							index=0;
+						}else if(index<1-arr.length){
+							index=1-arr.length;
+						}
+						
+						
+						// 小红点
+						for(var i=0;i<pointSpans.length;i++){
+							pointSpans[i].classList.remove("active");
+						}
+						pointSpans[-index].classList.add("active");
+						
+						
+						
+						ulNode.style.transition="0.5s left";
+						
+						ulNode.style.left=index*(document.documentElement.clientWidth)+"px";
+					})
+					
+				}
+			}
+			
+			
+			
+			
+		
+		
+		
+			
+			
+		}
+		
+		
+	</script>
+</html>

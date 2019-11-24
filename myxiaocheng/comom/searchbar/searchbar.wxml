@@ -1,0 +1,12 @@
+<!--comom/searchbar/searchbar.wxml-->
+<view class="sousuo">
+  <image class="imagse" 
+          src="/images/zuo.png" 
+          mode="widthFix"
+          bindtap="dianxlick"
+          ></image>
+  <input class="inp" placeholder="搜索" bindinput="searchclick" focus></input>
+</view>
+<view class="textzong">
+  <text class="textsuo" wx:if="{{xian}}" wx:for="{{xianshi}}" wx:key="{{index}}">{{item.title}}</text>
+</view>

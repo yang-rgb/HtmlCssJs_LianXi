@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>媒体查询</title>
+		<style>
+			/* 宽度小于500px */
+			@media screen and (max-width:500px) {
+				body{
+					background-color:red;
+					}
+				.box1{
+					width: 10rem;
+					height: 10rem;
+					background-color: aqua;
+					}
+			}
+			
+				/* 宽度在500px-800px */
+			@media screen and (min-width:500px) and (max-width:800px) {
+				body{
+					background-color:green;
+					}
+				.box1{
+					width: 15rem;
+					height: 15rem;
+					background-color: yellow;
+					}
+			}
+			
+			/* 宽度大于8000px */
+			@media screen and (min-width:800px){
+				body{
+					background-color:blue;
+					}
+				.box1{
+					width: 20rem;
+					height: 20rem;
+					background-color: yellow;
+					}
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="box1">dddddd</div>
+	</body>
+</html>
