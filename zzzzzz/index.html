@@ -1,29 +1,90 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-		<title>NativeObj Example</title>
-		<script type="text/javascript">
-var view=null;
-// H5 plus事件处理
-function plusReady(){
-}
-if(window.plus){
-	plusReady();
-}else{
-	document.addEventListener('plusready', plusReady, false);
-}
-// 创建原生View控件
-function createView(){
-	view = new plus.nativeObj.ImageSlider('test',
-	{top:'100px',left:'0px',height:'200px',width:'100%',position:'absolute',images:[{src:'1.png'},{src:'2.png'},{src:'3.png'}]});
-	plus.webview.currentWebview().append(view);
-}
-		</script>
+	<meta charset="utf-8">
+	<title>Audio Example</title>
+	<style type="text/css">
+		input,button{
+			display: block;
+			width: 100px;
+			height: 200px;
+		}
+		div{
+			position: absolute;
+			bottom: 20px;
+			right: 0.185185rem;
+			width: 450px;
+			height:450px;
+			background: #007AFF;
+			display: none;
+		}
+	</style>
+	
 	</head>
 	<body>
-		创建图片轮播控件，添加到Webview窗口显示<br/>
-		<button onclick="createView()">创建图片轮播控件</button><br/>
+		<input type="button" value="录" onclick="startRecord();"/> 
+		<br/>
+		
+		<input type="button" value="停止" onclick="stopRecord();"/>
+		
+		<br/>
+		<div id="dddd"></div>
+		<button type="button" onclick="Play();">播</button>
 	</body>
+	<script type="text/javascript">
+			var ddd=document.getElementById("dddd")
+			console.log(ddd)
+	// 扩展API加载完毕后调用onPlusReady回调函数 
+	document.addEventListener( "plusready", onPlusReady, false );
+	var r = null; 
+	// 扩展API加载完毕，现在可以正常调用扩展API 
+	function onPlusReady() { 
+		r = plus.audio.getRecorder(); 
+	}
+	var di=null;
+	function startRecord() {
+		ddd.style.display="block"
+		r.record( {filename:"_doc/audio/"}, function (p) {
+		alert(9)
+			plus.io.resolveLocalFileSystemURL(p, function(entry){
+					di=p;
+			}, function(e){
+				outLine('读取录音文件错误：'+e.message);
+			});
+			
+		}, function ( e ) {
+			 
+			if(e.message){
+				alert(true)
+			}
+			for( var key in e){
+				alert(key)
+			}
+			alert( "Audio record failed: " + e.message );
+		} );
+	}
+	function stopRecord() {
+		alert('挺')
+		r.stop(); 
+		
+		ddd.style.display="none"
+	}
+	
+	var p=null;
+	// 开始播放
+	function Play(url){
+		alert(di)
+		ddd.style.display="block"
+		p = plus.audio.createPlayer(di);
+		p.play(function(){
+		ddd.style.display="none"
+		
+		}, function(e){
+			outLine('播放音频文件"'+url+'"失败：'+e.message);
+		});
+		
+	}
+	
+	
+		</script>
 </html>

@@ -1,12 +1,12 @@
 let http=require("http");
 let fs=require("fs");
 let server=http.createServer((req,res)=>{
-	if(req.url==="/test1.html"){
+	if(req.url==="/test1.html"){ //判断url
 		// (req.url==="/page1/xx")
-		fs.readFile("./test1.html",(err,data)=>{
+		fs.readFile("./test1.html",(err,data)=>{ //读取test1.html
 			if(!err){
 				res.writeHead(200,{"Content-Type":"text/html;charset=UTF-8"});
-				res.end(data);
+				res.end(data);//返回test1.html网页
 			}
 		});
 	}else if(req.url==="/test2.html"){

@@ -6,76 +6,25 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 <title>蚂蚁部落</title>
 <style>
-	*{
-		padding: 0;
-		margin: 0;
-	}
-	body{
-		background: #0086B3;
-	}
+	.print{
 	
-	
-	
-	.load2{
-		width: 200px;
-		height: 200px;
-		margin: 100px auto;
-		border: 1px solid #000000;
-		position: relative;
+	    width:250px;
+	    white-space:nowrap;
+	    overflow:hidden;
+	    -webkit-animation: dy 3s steps(60, end) infinite;
+	    animation: dy 3s steps(50, end) infinite;
 	}
-	.loader1,.loader2{
-		width: 100px;
-		height: 200px;
-		position: absolute;
-		top: 0;
-		overflow: hidden;
+	@-webkit-keyframes dy{
+	    from { width: 0;}
 	}
-	.loader1{
-		left: 0;
-	}
-	.loader2{
-		right: 0;
-	}
-	.t1{
-		width: 200px;
-		height: 200px;
-		background-color: transparent;
-		border: 10px solid #000;
-		border-top-color: transparent;
-		border-right-color: transparent;
-		box-sizing: border-box;
-		border-radius: 50%;
-		transform: rotate(225deg);
-	}
-	.t2{
-		width: 200px;
-		height: 200px;
-		background-color: transparent;
-		border: 10px solid #000;
-		border-top-color: transparent;
-		border-left-color: transparent;
-		border-radius: 50%;
-		transform: rotate(-225deg);
-		box-sizing: border-box;
-		position: absolute;
-		top: 0;
-		right: 0;
+	@keyframes dy{
+	    from { width: 0;}
 	}
 </style>
 </head>
 <body>
 	
-	
-	
-	<div class=" load2">
-		<div class="loader1">
-			<div class="t1"></div>
-		</div>
-		<div class="loader2">
-			<div class="t2"></div>
-		</div>
-	</div>
-	
+	<p class="print">这里加入文字内容</p>
 	
 	
 	<script src="https://cdn.jsdelivr.net/npm/better-scroll"></script>

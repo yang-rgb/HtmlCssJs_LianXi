@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>socket.io</title>
+		<script src="socket.io.js"></script>
+	</head>
+	<body>
+		
+		
+		
+		<script type="text/javascript">
+			 const socket = io.connect('http://localhost:8000');
+			 //接受服务器信息
+			 socket.on('hehe',function(msg){
+				 console.log(msg)
+			 })
+			 //向服务器发送信息
+			 socket.emit('haha','向服务器发信息')
+			
+		</script>
+	</body>
+</html>

@@ -25,31 +25,13 @@ export default {
 		celan
 	},
 	mounted(){ 
-		document.addEventListener('plusready', function() {
-			var fill=null;
-		        var webview = plus.webview.currentWebview();
-		        plus.key.addEventListener('backbutton', function() {
-		            webview.canBack(function(e) {
-		                if(e.canBack) {
-		                    webview.back();   
-		                } else {
-							if(!fill){
-								fill=new Date().getTime();
-								plus.nativeUI.toast("再按一次退出应用")
-								setTimeout(function() {
-									fill=null
-								}, 1000);
-							}else{
-								if(new Date().getTime()-fill<1000){
-									plus.runtime.quit();
-								}
-							}
-		                }
-		            })
-		        });
-		    });
-		       
-		
+		tanchuang2({
+					title:"青少年模式",
+					handleOk(){
+						console.log(0)
+					}
+				});
+
 	}
 	
 }

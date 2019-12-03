@@ -25,6 +25,7 @@ export default{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 999;
 }
 .tanchuang .rou{
 	width: 3.703703rem;

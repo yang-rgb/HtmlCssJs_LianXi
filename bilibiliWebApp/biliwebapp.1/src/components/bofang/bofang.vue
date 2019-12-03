@@ -658,6 +658,12 @@
 						}else{
 							document.querySelectorAll(".tu1")[index].style.color="";
 						}
+						plus.share.sendWithSystem({content:'分享内容',href:'http://www.dcloud.io/'}, function(){
+								console.log('分享成功');
+							}, function(e){
+								console.log('分享失败：'+JSON.stringify(e));
+							});
+							
 						this.arrse[index]=!this.arrse[index];
 						break;
 					

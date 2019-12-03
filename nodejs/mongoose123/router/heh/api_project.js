@@ -1,0 +1,16 @@
+define({
+  "name": "呵呵",
+  "version": "0.1.0",
+  "description": "api文档描述",
+  "title": "Hi好啊",
+  "url": "http://127.0.0.1:8000",
+  "sampleUrl": false,
+  "defaultVersion": "0.0.0",
+  "apidoc": "0.3.0",
+  "generator": {
+    "name": "apidoc",
+    "time": "2019-11-30T05:44:13.606Z",
+    "url": "http://apidocjs.com",
+    "version": "0.18.0"
+  }
+});

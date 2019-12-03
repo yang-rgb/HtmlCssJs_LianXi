@@ -141,6 +141,7 @@ export default {
   },
  mounted(){
 	this.navtop=this.$refs.nav.offsetTop;
+	
  },
 beforeRouteEnter (to, from, next) {
  next(vm => {
