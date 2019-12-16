@@ -11,12 +11,9 @@
 	    width:250px;
 	    white-space:nowrap;
 	    overflow:hidden;
-	    -webkit-animation: dy 3s steps(60, end) infinite;
 	    animation: dy 3s steps(50, end) infinite;
 	}
-	@-webkit-keyframes dy{
-	    from { width: 0;}
-	}
+	
 	@keyframes dy{
 	    from { width: 0;}
 	}
@@ -24,21 +21,17 @@
 </head>
 <body>
 	
-	<p class="print">这里加入文字内容</p>
+	<canvas id="myCanvas"></canvas>
 	
 	
-	<script src="https://cdn.jsdelivr.net/npm/better-scroll"></script>
 	<script type="text/javascript">
-		var er=document.getElementById("sousuoye");
-		var fg=document.getElementById("fg");
-		var ers=er.children;
-		fg.onclick=function(){
-			for(var i=0;i<ers.length;i++){
-				er.removeChild(ers[i]);
-			}
-		}
+		var arr=[1,5,2,9,10,15,2,45,6]
 		
-		 
+		arr.sort((a,b)=>{
+			return ;
+		})
+		
+		console.log(Math.random()-0.5)
 		
 	</script>
 </body>

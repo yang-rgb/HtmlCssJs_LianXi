@@ -93,6 +93,46 @@
 					
 				// },300)
 				
+				axios.get("/gdsf?id=123")
+				.then(function(res){
+					
+				})
+				.catch(function(err){
+					
+				})
+				
+				axios.get('/ddddd',{
+					params:{
+						id:344
+					}
+				})
+				.then(function(res){
+					
+				})
+				.catch(function(err){
+					
+				})
+				
+				axios.post('/ssss',{
+					fname:'ddd',
+					gar:'dd'
+				})
+				.then(function(ers){
+					
+				})
+				.catch(function(err){
+					
+				})
+				
+				function ddddd(){
+					return axios.get("/dddd")
+				}
+				function ddd(){
+					return axios.get('/ddd')
+				}
+				
+				axios.all([ddddd(),ddd()])
+				
 		</script>
 	</body>
 	

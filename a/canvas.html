@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#myCanvas{
+				border: 1px solid #000000;
+				width: 400px;
+				height: 400px ;
+				
+			}
+		</style>
+	</head>
+	<body>
+		
+		<canvas id="myCanvas" ></canvas>
+		
+		<script type="text/javascript">
+			var canvas=document.getElementById('myCanvas')
+			
+
+			
+			var ctx=canvas.getContext('2d')
+			
+			
+			console.log(window.devicePixelRatio)
+		
+			canvas.width=800
+			canvas.height=800
+	
+			
+			var startAngle=1.5*Math.PI;
+			var baifengbi=0.9
+			var endAngle=baifengbi*Math.PI*2;
+			ctx.arc(400,400,200,0,Math.PI*2)
+			ctx.lineWidth=40;
+			ctx.strokeStyle='#ccc'
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.arc(400,400,200,startAngle,endAngle+startAngle)
+			ctx.lineWidth=40;
+			ctx.strokeStyle='red'
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.fillStyle = 'red';
+			ctx.textAlign = 'center';
+			ctx.textBaseline="middle"; 
+			ctx.fillText(baifengbi*100 + '%', 100, 100);
+			
+			
+		</script>
+	</body>
+</html>
